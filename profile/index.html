@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代表医師プロフィール｜精神科医・産業医｜メドワーク産業医事務所</title>
+<meta name="description" content="メドワーク産業医事務所代表・菅谷真之のプロフィール。精神保健指定医・日本医師会認定産業医。精神科外来25年以上の臨床経験と産業医の両方の視点で企業をサポート。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://medwork-sangyoui.jp/profile/">
+<meta property="og:title" content="代表医師プロフィール｜精神科医・産業医｜メドワーク産業医事務所">
+<meta property="og:description" content="メドワーク産業医事務所代表・菅谷真之のプロフィール。精神保健指定医・日本医師会認定産業医。精神科外来25年以上の臨床経験と産業医の両方の視点で企業をサポート。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medwork-sangyoui.jp/profile/">
+<meta property="og:image" content="https://medwork-sangyoui.jp/ogp.png">
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: #2c2c2c;
+    background: #fff;
+  }
+  img { max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== COLORS ===== */
+  :root {
+    --navy:      #1a3557;
+    --navy-dark: #122540;
+    --teal:      #2a7a8c;
+    --teal-light:#e8f4f7;
+    --accent:    #c0392b;
+    --gray-bg:   #f7f8fa;
+    --gray-line: #e0e4ea;
+    --text-sub:  #666;
+  }
+
+  /* ===== HEADER / NAV ===== */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 32px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .logo {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .logo span {
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    letter-spacing: 0.06em;
+    vertical-align: middle;
+  }
+  nav { display: flex; gap: 28px; }
+  nav a {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  nav a:hover { color: #fff; border-bottom-color: var(--teal); }
+  nav a.active { color: #fff; border-bottom-color: var(--teal); }
+  .btn-nav-cta {
+    background: var(--accent);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: none !important;
+  }
+  .btn-nav-cta:hover { background: #a93226; border-bottom: none !important; }
+
+  /* ===== SECTIONS COMMON ===== */
+  section { padding: 96px 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  .section-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 48px;
+  }
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--teal);
+    margin-top: 14px;
+  }
+
+  /* ===== PAGE HERO ===== */
+  #page-hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, var(--teal) 100%);
+    padding: 140px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner-grid {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  .hero-inner-text { flex: 1; }
+  .hero-photo {
+    flex-shrink: 0;
+    width: 220px;
+  }
+  .hero-photo img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  @media (max-width: 768px) {
+    .hero-inner-grid { flex-direction: column-reverse; gap: 24px; }
+    .hero-photo { width: 160px; }
+    .hero-photo img { width: 160px; height: 200px; }
+  }
+  #page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+  }
+  .hero-h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  .hero-name-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 28px;
+    letter-spacing: 0.08em;
+  }
+  .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero-badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== BASIC INFO ===== */
+  #basic { background: var(--gray-bg); }
+  .profile-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .profile-card-header {
+    background: var(--navy);
+    color: #fff;
+    padding: 24px 32px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .profile-icon {
+    width: 56px; height: 56px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .profile-card-header h2 {
+    font-size: 24px; font-weight: 800; margin-bottom: 4px;
+  }
+  .profile-card-header p { font-size: 14px; color: rgba(255,255,255,0.75); }
+  .profile-card-body { padding: 32px; }
+  .profile-credentials { display: grid; gap: 10px; }
+  .credential-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 16px; line-height: 1.7;
+  }
+  .credential-dot {
+    width: 8px; height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  /* ===== CAREER ===== */
+  #career { background: #fff; }
+  .career-text {
+    font-size: 17px;
+    line-height: 1.95;
+    color: #3a3a3a;
+  }
+  .career-text p { margin-bottom: 20px; }
+  .career-text p:last-child { margin-bottom: 0; }
+
+  /* ===== MESSAGE ===== */
+  #message { background: var(--gray-bg); }
+  .message-block {
+    background: #fff;
+    border-left: 4px solid var(--teal);
+    padding: 32px 36px;
+    border-radius: 0 10px 10px 0;
+    font-size: 17px;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 32px;
+  }
+  .message-block p { margin-bottom: 20px; }
+  .message-block p:last-child { margin-bottom: 0; }
+
+  /* ===== VALUES ===== */
+  #values { background: #fff; }
+  .values-text {
+    font-size: 17px;
+    line-height: 1.95;
+    color: #3a3a3a;
+  }
+  .values-text p { margin-bottom: 20px; }
+  .values-text p:last-child { margin-bottom: 0; }
+  .values-highlight {
+    background: var(--teal-light);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 24px 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.8;
+  }
+
+  /* ===== KENSHU ===== */
+  #kenshu { background: var(--gray-bg); }
+  .kenshu-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 28px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 16px;
+    line-height: 1.9;
+    color: #3a3a3a;
+  }
+  .kenshu-card strong { color: var(--navy); font-weight: 800; }
+
+  /* ===== CTA SECTION ===== */
+  #cta { background: var(--navy); text-align: center; padding: 80px 0; }
+  #cta .section-title { color: #fff; }
+  #cta .section-title::after { background: var(--teal); margin: 14px auto 0; }
+  .cta-lead { color: rgba(255,255,255,0.8); font-size: 17px; margin-bottom: 36px; }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 16px rgba(192,57,43,0.4);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #a93226; transform: translateY(-1px); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.5);
+    padding: 40px 32px 28px;
+    font-size: 14px;
+  }
+  .footer-grid {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px; margin-bottom: 32px; text-align: left;
+  }
+  .footer-col-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+  .footer-bottom {
+    max-width: 900px; margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer a { color: rgba(255,255,255,0.5); }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    header { padding: 0 16px; }
+    nav { display: none; }
+    .pc-br { display: none; }
+    .hero-h1 { font-size: 30px; }
+    section { padding: 64px 0; }
+    .message-block { padding: 24px 20px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">
+    <span>精神科医 × 産業医</span>メドワーク産業医事務所
+  </a>
+  <nav>
+    <a href="/service/spot/">スポット面談</a>
+    <a href="/service/advisor/">産業医契約</a>
+    <a href="/service/training/">研修</a>
+    <a href="/profile/" class="active">プロフィール</a>
+    <a href="/contact/" class="btn-nav-cta">無料相談</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="container">
+    <div class="hero-inner hero-inner-grid">
+      <div class="hero-inner-text">
+        <div class="hero-tag">代表医師プロフィール</div>
+        <h1 class="hero-h1">菅谷 真之</h1>
+        <p class="hero-name-sub">すがや まさゆき｜精神科医・産業医</p>
+        <div class="hero-badges">
+          <span class="hero-badge">日本医師会認定産業医</span>
+          <span class="hero-badge">精神保健指定医</span>
+          <span class="hero-badge">コンサータ登録医</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/images/profile.jpg" alt="菅谷真之 代表医師">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BASIC INFO -->
+<section id="basic">
+  <div class="container">
+    <span class="section-label">基本情報</span>
+    <h2 class="section-title">資格・専門領域</h2>
+    <div class="profile-card">
+      <div class="profile-card-header">
+        <div class="profile-icon">🩺</div>
+        <div>
+          <h2>菅谷 真之</h2>
+          <p>メドワーク産業医事務所 代表／メドワークアカデミー合同会社 代表社員</p>
+        </div>
+      </div>
+      <div class="profile-card-body">
+        <div class="profile-credentials">
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <span>日本医師会認定産業医</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <span>精神保健指定医</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <span>コンサータ登録医</span>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <span>大阪公立大学医学部卒業</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="container">
+    <span class="section-label">経歴</span>
+    <h2 class="section-title">これまでの経歴</h2>
+    <div class="career-text">
+      <p>大阪公立大学医学部卒業後、精神科医として複数の医療機関に勤務。精神科副院長を経て、大手製造業より招聘を受け、産業医として企業の産業保健活動に本格的に携わる。</p>
+      <p>以来、製造業・食品業・IT業など、業種を問わず複数の企業で産業医として活動。特に、メンタル不調、休職・復職対応、再発予防、管理職支援に重点を置いている。</p>
+      <p>年間500件超の産業医面談を行い、看護学校での講師経験も持つ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="message">
+  <div class="container">
+    <span class="section-label">代表メッセージ</span>
+    <h2 class="section-title">メンタル対応を、<br>一人で抱え込まないために</h2>
+    <div class="message-block">
+      <p>精神科と産業医の両方の現場を見てきた中で、強く感じていることがあります。</p>
+      <p>メンタル対応で判断を迫られるとき、人事担当者が情報整理や関係者間の調整を一人で抱え込みやすい場面を何度も見てきました。</p>
+      <p>主治医、本人、現場。それぞれの立場が違う中で、対応方針を整理しなければならない。そこには、医学的な理解だけでなく、職場の実情を踏まえた産業保健の視点が必要です。</p>
+      <p>だからこそ、メドワーク産業医事務所では、本人の健康状態と職場の実情を踏まえながら、医学的・産業保健的な観点から、対応方針を一緒に整理することを大切にしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="container">
+    <span class="section-label">大切にしていること</span>
+    <h2 class="section-title">不調者への適切な配慮と、<br>職場全体の安全性・公平性のバランスを保つこと</h2>
+    <div class="values-text">
+      <div class="values-highlight">
+        不調者への適切な配慮と、職場全体の安全性・公平性のバランスを保つこと。
+      </div>
+      <p>産業医は、特定の一人だけを見る立場ではありません。本人の健康を守ると同時に、周囲の従業員の健康や職場全体の安全性にも目を向ける必要があります。</p>
+      <p>メンタル不調対応では、不調者への適切な配慮が必要です。一方で、その配慮が職場全体の公平性を損なわず、現場で継続可能な対応になっているかも重要です。</p>
+      <p>病状の理解と、職場の現実。その両方を踏まえて、本人の健康と職場全体の安全性・公平性を両立できる対応を整理します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- KENSHU -->
+<section id="kenshu">
+  <div class="container">
+    <span class="section-label">研鑽</span>
+    <h2 class="section-title">専門的な研鑽</h2>
+    <div class="kenshu-card">
+      大阪公立大学大学院医学研究科 神経精神医学<br>
+      <strong>井上幸紀教授</strong>（日本産業衛生学会理事 / 日本産業精神保健学会理事）<br>
+      のご指導を受けました。
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <h2 class="section-title">まずは無料でご相談ください</h2>
+    <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
+    <a href="/contact/" 
