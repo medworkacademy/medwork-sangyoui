@@ -315,12 +315,19 @@
   footer a { color: rgba(255,255,255,0.5); }
   footer a:hover { color: rgba(255,255,255,0.8); }
 
+  .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+  .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; }
+  .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:var(--navy); z-index:99; flex-direction:column; padding:16px 0; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:rgba(255,255,255,0.85); font-size:16px; padding:14px 24px; border-bottom:1px solid rgba(255,255,255,0.1); font-weight:500; }
+  .mobile-menu-cta { background:var(--accent); color:#fff !important; margin:16px 24px 0; padding:14px 24px !important; border-radius:4px; text-align:center; font-weight:700 !important; border-bottom:none !important; }
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
     .container { padding: 0 16px; }
     header { padding: 0 16px; }
     .btn-nav-cta { display: none; }
     .logo { font-size: 14px; white-space: normal; }
+    .hamburger { display: flex; }
     html, body { width: 100%; max-width: 100%; }
     .container { width: 100%; box-sizing: border-box; }
     .logo span { display: none; }
@@ -349,7 +356,16 @@
     <a href="/profile/">プロフィール</a>
     <a href="/contact/" class="btn-nav-cta">無料相談</a>
   </nav>
+  <button class="hamburger" id="hamburger" aria-label="menu"><span></span><span></span><span></span></button>
 </header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">トップ</a>
+  <a href="/service/spot/">スポット面談</a>
+  <a href="/service/advisor/">産業医契約</a>
+  <a href="/service/training/">研修</a>
+  <a href="/profile/">プロフィール</a>
+  <a href="/contact/" class="mobile-menu-cta">無料相談</a>
+</div>
 
 <!-- PAGE HERO -->
 <section id="page-hero">
