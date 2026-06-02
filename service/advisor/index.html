@@ -249,6 +249,7 @@
   /* ===== CASES ===== */
   #cases { background: var(--gray-bg); }
   .cases-table-wrap { overflow-x: auto; }
+  .cases-sp { display: none; }
   table { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
   thead tr { background: var(--navy); color: #fff; }
   thead th { padding: 16px 22px; text-align: left; font-weight: 700; letter-spacing: 0.04em; }
@@ -373,6 +374,13 @@
     .hero-lead { font-size: 16px; }
     section { padding: 64px 0; }
     .footer-grid { grid-template-columns: 1fr; }
+    .cases-pc { display: none; }
+    .cases-sp { display: block; }
+    .cases-cards { display: grid; gap: 16px; }
+    .case-card { background: #fff; border-radius: 8px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid var(--teal); }
+    .case-tag { font-size: 13px; color: var(--teal); font-weight: 700; margin-bottom: 6px; }
+    .case-plan { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .case-desc { font-size: 14px; color: #555; line-height: 1.7; }
   }
 </style>
 </head>
@@ -528,7 +536,8 @@
   <div class="container">
     <span class="section-label">Cases</span>
     <h2 class="section-title">業種・企業規模別<br>契約事例</h2>
-    <div class="cases-table-wrap">
+    <!-- PC: テーブル表示 -->
+    <div class="cases-table-wrap cases-pc">
       <table>
         <thead>
           <tr>
@@ -561,6 +570,35 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <!-- スマホ: カード表示 -->
+    <div class="cases-cards cases-sp">
+      <div class="case-card">
+        <div class="case-tag">製造業 / 約2,000名</div>
+        <div class="case-plan">週1回訪問・精神科専門サポート</div>
+        <div class="case-desc">既存の産業医体制はそのままに、精神科専門医として追加契約。メンタル不調対応・休職復職判断を中心に関与。</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">製造業 / 約500名</div>
+        <div class="case-plan">週1回訪問・嘱託産業医契約</div>
+        <div class="case-desc">産業保健体制の本格整備にあたり、精神科専門医として週1回の継続関与。</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">飲食業 / 200名未満</div>
+        <div class="case-plan">月1回訪問・嘱託産業医契約</div>
+        <div class="case-desc">シフト制職場のメンタル不調・休職対応を中心に支援。</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">IT業 / 150名未満</div>
+        <div class="case-plan">月1回訪問・嘱託産業医契約</div>
+        <div class="case-desc">高ストレス者面談・ストレスチェック後の職場改善支援を実施。</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">IT業 / 50名未満</div>
+        <div class="case-plan">顧問契約</div>
+        <div class="case-desc">産業医選任義務はないが、休職・復職対応や管理職相談の窓口として継続契約。</div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
