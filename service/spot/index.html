@@ -15,13 +15,14 @@
 <style>
   /* ===== RESET & BASE ===== */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   body {
     font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
     font-size: 17px;
     line-height: 1.85;
     color: #2c2c2c;
     background: #fff;
+    overflow-x: hidden;
   }
   img { max-width: 100%; }
   a { color: inherit; text-decoration: none; }
@@ -174,6 +175,7 @@
   #intro { background: var(--gray-bg); }
   .intro-scene {
     background: #fff;
+    overflow-x: hidden;
     border-left: 4px solid var(--teal);
     padding: 24px 28px;
     border-radius: 0 8px 8px 0;
@@ -189,7 +191,8 @@
   }
 
   /* ===== CHECK LIST ===== */
-  #caselist { background: #fff; }
+  #caselist { background: #fff;
+    overflow-x: hidden; }
   .check-list { list-style: none; display: grid; gap: 14px; }
   .check-list li {
     background: var(--gray-bg);
@@ -221,7 +224,8 @@
   #whatwedo { background: var(--gray-bg); }
 
   /* ===== POINT ===== */
-  #point { background: #fff; }
+  #point { background: #fff;
+    overflow-x: hidden; }
   .point-lead {
     font-size: 17px;
     line-height: 1.9;
@@ -245,6 +249,7 @@
   #price { background: var(--gray-bg); }
   .price-card {
     background: #fff;
+    overflow-x: hidden;
     border-radius: 10px;
     border-top: 4px solid var(--teal);
     padding: 36px 40px;
@@ -287,7 +292,8 @@
   }
 
   /* ===== FAQ ===== */
-  #faq { background: #fff; }
+  #faq { background: #fff;
+    overflow-x: hidden; }
   .faq-list { display: grid; gap: 12px; }
   .faq-item {
     background: var(--gray-bg);
