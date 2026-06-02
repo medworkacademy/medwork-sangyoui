@@ -505,4 +505,53 @@
 <section id="cta">
   <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
-    <p class="cta-lead">初回30分・無料でご相談�
+    <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
+    <a href="/contact/" class="btn-primary" style="font-size:17px; padding:18px 44px;">無料相談を申し込む →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-col-title">メドワーク産業医事務所</div>
+      <div style="font-size:13px; line-height:1.9;">
+        運営法人：メドワークアカデミー合同会社<br>
+        代表者：菅谷 真之
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">所在地・対応エリア</div>
+      <div style="font-size:13px; line-height:1.9;">
+        所在地：大阪府堺市南区<br>
+        対応エリア：大阪府内中心・オンライン全国対応可
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">お問い合わせ</div>
+      <div style="font-size:13px; line-height:1.9;">
+        E-mail：<a href="mailto:medworkacademy@gmail.com">medworkacademy@gmail.com</a><br>
+        初回30分 無料相談受付中
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 メドワーク産業医事務所 / メドワークアカデミー合同会社</p>
+    <a href="/privacy/">プライバシーポリシー</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hb = document.getElementById('hamburger');
+  var mm = document.getElementById('mobileMenu');
+  if (hb && mm) {
+    hb.addEventListener('click', function() { mm.classList.toggle('open'); });
+    mm.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { mm.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
