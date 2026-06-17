@@ -1,0 +1,22 @@
+# 全ファイルの改行コードをLFに統一
+* text=auto eol=lf
+
+# HTMLはLF固定
+*.html text eol=lf
+
+# CSSもLF固定
+*.css text eol=lf
+
+# JSもLF固定
+*.js text eol=lf
+
+# XMLもLF固定（sitemap.xml等）
+*.xml text eol=lf
+
+# 画像・バイナリはそのまま
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
