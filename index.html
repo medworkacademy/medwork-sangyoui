@@ -406,7 +406,40 @@
     border-bottom: none !important;
   }
 
+  /* ===== SCENES ===== */
+  #scenes { background: var(--teal-light); }
+  .scenes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .scene-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--navy);
+  }
+  .scene-card h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .scene-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+  }
+
   /* ===== RESPONSIVE ===== */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .scenes-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .scenes-grid { grid-template-columns: 1fr; }
+  }
   @media (max-width: 768px) {
     html, body { width: 100%; max-width: 100%; }
     header { padding: 0 16px; width: 100%; box-sizing: border-box; }
@@ -488,15 +521,49 @@
     <span class="section-label">こんな状況が続いていませんか？</span>
     <h2 class="section-title">人事担当者が<br>一人で抱えている問題</h2>
     <ul class="pain-list">
-      <li>主治医は「復職可能」と言うが、本当に今の職場に戻せるか判断できない</li>
-      <li>本人は「戻りたい」、現場は「まだ不安」、復職に向けた対応方針を整理しきれない</li>
-      <li>産業医に相談しても「様子を見ましょう」で終わり、次の一手が見えない</li>
-      <li>管理職から相談されても、会社としての対応方針を整理しきれない</li>
-      <li>休職・復職対応が長期化し、本人・現場・人事それぞれの負担が大きくなっている</li>
-      <li>ストレスチェック後の結果を、職場改善にどう使えばよいかわからない</li>
+      <li>復職可の診断書。本当に戻して大丈夫？</li>
+      <li>本人は大丈夫、職場は不安、板挟みになる</li>
+      <li>産業医は「様子を見ましょう」という。そのあと、どうすれば？</li>
+      <li>管理職から対応方法の相談、答えたいが判断の根拠がない</li>
+      <li>長期の休職。このまま様子みでいいのか？</li>
+      <li>ストレスチェックはしたけど、そのあとは？</li>
     </ul>
     <div class="pain-bridge">
       その難しい判断は、産業医が早い段階から関わり、意見交換を重ねることで、根拠を持って整理しやすくなります。
+    </div>
+  </div>
+</section>
+
+<!-- SCENES -->
+<section id="scenes">
+  <div class="container">
+    <span class="section-label">こんな場面で相談できます</span>
+    <h2 class="section-title">人事・管理職が<br>判断に迷いやすい場面</h2>
+    <div class="scenes-grid">
+      <div class="scene-card">
+        <h3>復職させていいか判断できない</h3>
+        <p>主治医の「復職可」を職場の実情と照らし合わせ、産業医の意見としてまとめます。</p>
+      </div>
+      <div class="scene-card">
+        <h3>本人・現場・人事の意見がズレている</h3>
+        <p>三者の認識のずれを整理し、受け入れ条件・就業配慮を具体的に言語化します。</p>
+      </div>
+      <div class="scene-card">
+        <h3>不調を本人が認めない</h3>
+        <p>受診勧奨の進め方・伝え方・記録の残し方を、会社の立場から助言します。</p>
+      </div>
+      <div class="scene-card">
+        <h3>管理職が一人で抱え込んでいる</h3>
+        <p>管理職が適切に動けるよう、会社としての対応方針を整理します。</p>
+      </div>
+      <div class="scene-card">
+        <h3>休職が長引き、次の手が見えない</h3>
+        <p>対応が止まりがちなフェーズで、次の一手を産業医の立場から助言します。</p>
+      </div>
+      <div class="scene-card">
+        <h3>ストレスチェック後の動き方が分からない</h3>
+        <p>高ストレス者面談・職場改善につながる動き方を、一緒に整理します。</p>
+      </div>
     </div>
   </div>
 </section>
