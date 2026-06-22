@@ -527,5 +527,8 @@
   var hb=document.getElementById("hamburger"),mm=document.getElementById("mobileMenu");
   if(hb&&mm){hb.addEventListener("click",function(){mm.classList.toggle("open");});mm.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mm.classList.remove("open");});});}
 </script>
+<script>
+  window.addEventListener("pageshow",function(){var f=document.querySelector("form");if(f){f.reset();}});
+</script>
 </body>
 </html>
