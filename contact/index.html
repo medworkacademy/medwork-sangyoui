@@ -547,5 +547,19 @@
   });
 })();
 </script>
+<script>
+  // form_start / form_submit 手動計測（GA4拡張計測が発火しないための代替・2026-07-06）
+  (function () {
+    var f = document.querySelector('form');
+    if (!f || typeof gtag !== 'function') return;
+    var started = false;
+    f.addEventListener('focusin', function () {
+      if (!started) { started = true; gtag('event', 'form_start', { form_id: 'contact' }); }
+    });
+    f.addEventListener('submit', function () {
+      gtag('event', 'form_submit', { form_id: 'contact' });
+    });
+  })();
+</script>
 </body>
 </html>
