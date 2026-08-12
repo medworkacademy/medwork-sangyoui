@@ -778,5 +778,21 @@
     });
   });
 </script>
+<script>
+  // ブラウザがページ内アンカー（#quicknav等）へ自動スクロールしない環境向けのフォールバック
+  (function() {
+    function scrollToHash() {
+      if (!location.hash) return;
+      var el;
+      try { el = document.querySelector(location.hash); } catch (e) { return; }
+      if (!el) return;
+      var headerH = 72;
+      var y = el.getBoundingClientRect().top + window.pageYOffset - headerH - 16;
+      window.scrollTo({ top: y, behavior: 'auto' });
+    }
+    window.addEventListener('load', scrollToHash);
+    window.addEventListener('hashchange', scrollToHash);
+  })();
+</script>
 </body>
 </html>
