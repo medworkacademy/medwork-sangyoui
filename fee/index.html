@@ -253,6 +253,17 @@
     margin-bottom: 16px;
   }
 
+  /* ===== COMPARE TABLE ===== */
+  #compare { background: #fff; }
+  .compare-table-wrap { overflow-x: auto; }
+  .compare-table-wrap table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .compare-table-wrap thead tr { background: var(--navy); color: #fff; }
+  .compare-table-wrap thead th { padding: 16px 18px; text-align: left; font-weight: 700; letter-spacing: 0.04em; }
+  .compare-table-wrap tbody tr { border-bottom: 1px solid var(--gray-line); }
+  .compare-table-wrap tbody tr:nth-child(even) { background: var(--gray-bg); }
+  .compare-table-wrap tbody th { padding: 16px 18px; text-align: left; font-weight: 700; color: var(--navy); background: var(--teal-light); }
+  .compare-table-wrap tbody td { padding: 16px 18px; }
+
   /* ===== PRICE ===== */
   #price { background: var(--gray-bg); }
   .price-card {
@@ -384,6 +395,9 @@
     section { padding: 64px 0; }
     .price-card { padding: 28px 24px; }
     .footer-grid { grid-template-columns: 1fr; }
+    .compare-table-wrap table { font-size: 15px; }
+    .compare-table-wrap th, .compare-table-wrap td { padding: 10px 12px; white-space: nowrap; }
+    .compare-table-wrap tbody td:last-child { white-space: normal; min-width: 160px; }
   }
 
   /* === スマホフォント調整 === */
@@ -450,6 +464,51 @@
       <span class="section-label">まず規模で決まる部分</span>
       <h2 class="section-title">従業員数で決まる部分が<br>あります</h2>
       <div class="intro-scene">従業員50人以上の事業場では、労働安全衛生法により産業医の選任が義務です。<br>この場合は、嘱託産業医契約が基本になります。<br><br>50人未満の場合、選任義務はありません。<br>しかし、休職者への対応や復職の判断が必要になる場面は、規模に関係なく発生します。<br>その場合は、スポット面談で必要なときだけ産業医の意見を得る方法があります。</div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="container">
+      <span class="section-label">比較表</span>
+      <h2 class="section-title">3つの契約形態<br>比較表</h2>
+      <div class="compare-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>スポット面談</th>
+              <th>顧問契約（50人未満）</th>
+              <th>嘱託産業医契約（50人以上）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">対象</th>
+              <td>規模問わず</td>
+              <td>50人未満・選任義務なし</td>
+              <td>50人以上・選任義務あり</td>
+            </tr>
+            <tr>
+              <th scope="row">頻度</th>
+              <td>都度・単発</td>
+              <td>訪問原則不要／月3件まで相談</td>
+              <td>月1回訪問〜</td>
+            </tr>
+            <tr>
+              <th scope="row">料金目安</th>
+              <td>33,000円／30分〜</td>
+              <td>33,000円〜／月</td>
+              <td>88,000円〜／月（50-100人）<br>121,000円〜／月（100-200人）</td>
+            </tr>
+            <tr>
+              <th scope="row">向いている場合</th>
+              <td>必要な面談・就業判断だけ、その都度依頼したい</td>
+              <td>選任までは不要だが、継続して相談できる先を持ちたい</td>
+              <td>産業医を選任し、継続的な産業保健対応を任せたい</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
