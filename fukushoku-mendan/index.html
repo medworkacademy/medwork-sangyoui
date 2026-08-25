@@ -396,6 +396,15 @@
     h2 { font-size: 20px; }
     h3 { font-size: 17px; }
   }
+
+  /* 中間幅（タブレット横〜小型ノート）でヘッダーを1段に収める */
+  @media (min-width: 769px) and (max-width: 1180px) {
+    nav { gap: 14px; }
+    nav a { font-size: 13.5px; }
+    .logo { font-size: 15px; }
+    .logo span { font-size: 10px; padding: 3px 7px; margin-right: 8px; }
+    header { padding: 0 16px; }
+  }
 </style>
 </head>
 <body>
@@ -406,8 +415,9 @@
     <span>精神科医 × 産業医</span>メドワーク産業医事務所
   </a>
   <nav>
-    <a href="/service/spot/">スポット面談</a>
+    <a href="/#quicknav">サービスの選び方</a>
     <a href="/service/advisor/">産業医契約</a>
+    <a href="/service/spot/">スポット面談</a>
     <a href="/service/training/">研修</a>
     <a href="/fee/">料金</a>
     <a href="/profile/">プロフィール</a>
@@ -417,8 +427,9 @@
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="/">トップ</a>
-  <a href="/service/spot/">スポット面談</a>
+  <a href="/#quicknav">サービスの選び方</a>
   <a href="/service/advisor/">産業医契約</a>
+  <a href="/service/spot/">スポット面談</a>
   <a href="/service/training/">研修</a>
   <a href="/fee/">料金</a>
   <a href="/profile/">プロフィール</a>
