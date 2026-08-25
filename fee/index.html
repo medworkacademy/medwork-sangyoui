@@ -410,6 +410,15 @@
     h2 { font-size: 20px; }
     h3 { font-size: 17px; }
   }
+
+  /* 中間幅（タブレット横〜小型ノート）でヘッダーを1段に収める */
+  @media (min-width: 769px) and (max-width: 1180px) {
+    nav { gap: 14px; }
+    nav a { font-size: 13.5px; }
+    .logo { font-size: 15px; }
+    .logo span { font-size: 10px; padding: 3px 7px; margin-right: 8px; }
+    header { padding: 0 16px; }
+  }
 </style>
 </head>
 <body>
@@ -420,8 +429,9 @@
     <span>精神科医 × 産業医</span>メドワーク産業医事務所
   </a>
   <nav>
-    <a href="/service/spot/">スポット面談</a>
+    <a href="/#quicknav">サービスの選び方</a>
     <a href="/service/advisor/">産業医契約</a>
+    <a href="/service/spot/">スポット面談</a>
     <a href="/service/training/">研修</a>
     <a href="/fee/" class="active">料金</a>
     <a href="/profile/">プロフィール</a>
@@ -431,8 +441,9 @@
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="/">トップ</a>
-  <a href="/service/spot/">スポット面談</a>
+  <a href="/#quicknav">サービスの選び方</a>
   <a href="/service/advisor/">産業医契約</a>
+  <a href="/service/spot/">スポット面談</a>
   <a href="/service/training/">研修</a>
   <a href="/fee/">料金</a>
   <a href="/profile/">プロフィール</a>
@@ -453,10 +464,10 @@
     <div class="container">
       <span class="section-label">契約形態</span>
       <h2 class="section-title">産業医への依頼は、<br>大きく3つの形があります</h2>
-      <div class="point-box"><p class="point-box-title">1. スポット面談（単発）</p>
-        必要なときだけ単発で依頼する形です。休職・復職などの個別案件が発生した場合や、産業医の選任義務がない規模の企業に向いています。→ <a href="/service/spot/">スポット面談の詳細</a></div>
-      <div class="point-box"><p class="point-box-title">2. 嘱託産業医契約（継続）</p>
+      <div class="point-box"><p class="point-box-title">1. 嘱託産業医契約（継続）</p>
         月1回訪問などの継続契約です。従業員50人以上で産業医の選任義務がある場合や、休職・復職やメンタル不調の相談が継続的に発生する場合に向いています。→ <a href="/service/advisor/">産業医契約の詳細</a></div>
+      <div class="point-box"><p class="point-box-title">2. スポット面談（単発）</p>
+        必要なときだけ単発で依頼する形です。休職・復職などの個別案件が発生した場合や、産業医の選任義務がない規模の企業に向いています。→ <a href="/service/spot/">スポット面談の詳細</a></div>
       <div class="point-box"><p class="point-box-title">3. 研修（単発）</p>
         管理職向けのラインケア研修など、単発の研修です。ラインケアの底上げをしたい場合に向いています。→ <a href="/service/training/">ラインケア研修の詳細</a></div>
     </div>
@@ -555,16 +566,16 @@
       <span class="section-label">当事務所の料金</span>
       <h2 class="section-title">メドワーク産業医事務所の<br>料金</h2>
       <div class="price-card">
-        <div class="price-label">スポット面談</div>
-        <div class="price-amount">33,000円 <span style="font-size:15px;">（税込）／30分まで</span></div>
-        <div class="price-detail">30分を超える場合、以降30分ごとに ＋16,500円（税込）<br>産業医意見書の作成 +22,000円（税込）／人事向け整理メモ +11,000円（税込）</div>
-        <p class="price-note">詳細は<a href="/service/spot/">スポット面談のページ</a>をご覧ください。</p>
-      </div>
-      <div class="price-card">
         <div class="price-label">嘱託産業医契約</div>
         <div class="price-amount">88,000円 <span style="font-size:15px;">（税込）〜／月</span></div>
         <div class="price-detail">従業員50〜100人：88,000円（税込）〜／月・100〜200人：121,000円（税込）〜／月・200人以上：別途お見積り</div>
         <p class="price-note">詳細は<a href="/service/advisor/">産業医契約のページ</a>をご覧ください。</p>
+      </div>
+      <div class="price-card">
+        <div class="price-label">スポット面談</div>
+        <div class="price-amount">33,000円 <span style="font-size:15px;">（税込）／30分まで</span></div>
+        <div class="price-detail">30分を超える場合、以降30分ごとに ＋16,500円（税込）<br>産業医意見書の作成 +22,000円（税込）／人事向け整理メモ +11,000円（税込）</div>
+        <p class="price-note">詳細は<a href="/service/spot/">スポット面談のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card">
         <div class="price-label">管理職向けメンタルヘルス研修</div>
@@ -572,7 +583,7 @@
         <div class="price-detail">参加人数・研修時間・カスタマイズ内容により費用が異なります。</div>
         <p class="price-note">詳細は<a href="/service/training/">ラインケア研修のページ</a>をご覧ください。</p>
       </div>
-      <p class="intro-bridge">どの形態が合うか分からない場合は、状況をうかがい、スポット・嘱託・研修のどれが合うか（あるいはまだ不要か）を初回30分の無料相談でご案内します。</p>
+      <p class="intro-bridge">どの形態が合うか分からない場合は、状況をうかがい、嘱託・スポット・研修のどれが合うか（あるいはまだ不要か）を初回30分の無料相談でご案内します。</p>
     </div>
   </section>
 
