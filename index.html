@@ -499,6 +499,85 @@
     header { padding: 0 16px; }
   }
 </style>
+
+<!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://medwork-sangyoui.jp/#organization",
+  "name": "メドワーク産業医事務所",
+  "url": "https://medwork-sangyoui.jp/",
+  "description": "精神科医が産業医を務める大阪の産業医事務所。企業のメンタルヘルス対応、休職・復職の産業医面談（復職判定）、嘱託産業医契約、スポット面談、管理職向けラインケア研修に対応。大阪府内中心・オンラインで全国対応。",
+  "email": "contact@medwork-sangyoui.jp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "大阪府",
+    "addressLocality": "堺市南区",
+    "addressCountry": "JP"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "大阪府"
+    },
+    {
+      "@type": "Country",
+      "name": "日本（オンライン対応）"
+    }
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "メドワークアカデミー合同会社"
+  },
+  "founder": {
+    "@id": "https://medwork-sangyoui.jp/profile/#person"
+  },
+  "slogan": "職場のメンタル対応を、人事だけで抱え込ませない",
+  "knowsAbout": [
+    "産業医",
+    "メンタルヘルス対応",
+    "休職・復職対応",
+    "復職判定",
+    "産業医面談",
+    "ラインケア研修",
+    "ストレスチェック後の対応"
+  ],
+  "priceRange": "スポット面談33,000円（税込）／30分〜、嘱託産業医契約88,000円（税込）／月〜"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "対応エリアはどこですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "大阪府内を中心に対応しています。オンライン面談・相談はエリア問わず対応可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何人から契約できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "従業員50人以上の事業場から嘱託産業医契約を承っています。50人未満の事業場は顧問契約、単発のご依頼はスポット面談をご利用ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "初回無料相談では何を話しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "貴社の従業員規模・現在の課題・産業医に期待する役割をお聞きします。契約後の支援イメージをご説明します。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
