@@ -616,6 +616,17 @@
   @media (max-width: 375px) {
     .fv-catch { font-size: 24px; }
   }
+
+  /* ===== 2026-09-05 追補2：スマホは左寄せに統一 ===== */
+  @media (max-width: 768px) {
+    .guide-else { text-align: left; }
+    .fee-box { text-align: left; }
+    .doctor-card { text-align: left; }
+    .doctor-card > div { width: 100%; }
+    .doctor-card .btn-line { align-self: flex-start; }
+    #cta { text-align: left; }
+    #cta .section-title::after { margin: 14px 0 0; }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -926,7 +937,7 @@
       <div>
         <div class="doctor-name"><span>代表産業医</span>菅谷 真之</div>
         <div class="doctor-meta">
-          精神科専門医／精神保健指定医／産業医<br>
+          精神保健指定医／産業医<br>
           精神科臨床25年以上・年間500件超の産業医面談
         </div>
         <a href="/profile/" class="btn-line">代表医師プロフィールを見る →</a>
