@@ -108,8 +108,8 @@
   .btn-nav-cta:hover { background: #9B4133; border-bottom: none !important; }
 
   /* ===== SECTIONS COMMON ===== */
-  section { padding: 96px 0; }
-  .container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
   .section-label {
     display: inline-block;
     font-size: 13px;
@@ -361,13 +361,13 @@
     font-size: 14px;
   }
   .footer-grid {
-    max-width: 900px; margin: 0 auto;
+    max-width: 1040px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 1fr 1fr;
     gap: 32px; margin-bottom: 32px; text-align: left;
   }
   .footer-col-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
   .footer-bottom {
-    max-width: 900px; margin: 0 auto;
+    max-width: 1040px; margin: 0 auto;
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 20px;
     display: flex; justify-content: space-between; align-items: center;
@@ -471,7 +471,7 @@
     .fv-catch { font-size: 24px; }
     .fv-sub { font-size: 15px; max-width: 100%; }
     .fv-note { word-break: break-all; max-width: 100%; }
-    section { padding: 64px 0; }
+    section { padding: 54px 0; }
     .footer-grid { grid-template-columns: 1fr; }
     .container { padding: 0 16px; width: 100%; box-sizing: border-box; }
     .cases-table-wrap table { font-size: 15px; }
@@ -497,6 +497,124 @@
     .logo { font-size: 15px; }
     .logo span { font-size: 10px; padding: 3px 7px; margin-right: 8px; }
     header { padding: 0 16px; }
+  }
+
+  /* ===== 2026-09-05 改修：追加スタイル ===== */
+  /* 統合PAIN（こんな場面で、判断に迷っていませんか？） */
+  .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .pain-card {
+    background: #fff; border-radius: 10px; padding: 26px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-top: 3px solid var(--navy);
+  }
+  .pain-card h3 { font-size: 17px; font-weight: 800; color: var(--navy); line-height: 1.6; margin-bottom: 12px; }
+  .pain-card p { font-size: 15px; color: #555; line-height: 1.9; }
+
+  /* ご相談に合わせた対応をご案内します */
+  #quicknav { background: var(--teal-light); }
+  .guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .guide-card {
+    background: #fff; border-radius: 10px; padding: 26px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-top: 3px solid var(--teal);
+    display: flex; flex-direction: column;
+  }
+  .guide-card h3 { font-size: 18px; font-weight: 800; color: var(--navy); line-height: 1.55; margin-bottom: 12px; }
+  .guide-card p { font-size: 15px; line-height: 1.9; color: #444; margin-bottom: 20px; flex: 1; }
+  .btn-line {
+    display: inline-block; align-self: flex-start;
+    border: 1.5px solid var(--teal); color: var(--teal);
+    font-size: 14.5px; font-weight: 700; padding: 10px 18px;
+    border-radius: 5px; transition: all 0.2s; line-height: 1.5;
+  }
+  .btn-line:hover { background: var(--teal); color: #fff; }
+  .guide-else {
+    margin-top: 32px; background: #fff; border: 1px solid var(--gray-line);
+    border-radius: 10px; padding: 32px 28px; text-align: center;
+  }
+  .guide-else h3 { font-size: 18px; font-weight: 800; color: var(--navy); line-height: 1.6; margin-bottom: 12px; }
+  .guide-else p { font-size: 15.5px; line-height: 1.9; color: #444; margin-bottom: 24px; }
+
+  /* サービス3枚 */
+  #service { background: #fff; }
+  .service-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-catch { font-size: 15px; font-weight: 700; color: var(--teal); line-height: 1.7; margin-bottom: 10px; }
+
+  /* 対応事例 */
+  #cases { background: var(--gray-bg); }
+
+  /* 代表医師 */
+  #doctor { background: var(--gray-bg); }
+  .doctor-card {
+    background: #fff; border: 1px solid var(--gray-line); border-radius: 10px;
+    padding: 30px; display: flex; gap: 28px; align-items: center;
+  }
+  .doctor-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .doctor-name { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.5; }
+  .doctor-name span { display: inline-block; font-size: 13px; font-weight: 700; color: var(--text-sub); margin-right: 10px; vertical-align: middle; }
+  .doctor-meta { font-size: 15px; line-height: 1.95; color: #444; margin-bottom: 20px; }
+
+  /* 料金への導線 */
+  #feenav { background: var(--teal-light); padding: 72px 0; }
+  .fee-box {
+    background: #fff; border-radius: 10px; padding: 32px 28px;
+    text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .fee-box p { font-size: 15.5px; line-height: 1.9; color: #444; margin-bottom: 24px; }
+
+  /* FAQ */
+  #faq { background: #fff; }
+  .faq-a p { margin-bottom: 12px; }
+  .faq-a p:last-child { margin-bottom: 0; }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    .service-grid-3 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .pain-grid { grid-template-columns: 1fr; gap: 14px; }
+    .guide-grid { grid-template-columns: 1fr; gap: 14px; }
+    .pain-card, .guide-card { padding: 22px 18px; }
+    .guide-else { padding: 26px 18px; }
+    .doctor-card { flex-direction: column; text-align: center; padding: 26px 18px; gap: 18px; }
+    .doctor-card .btn-line { align-self: center; }
+    .fee-box { padding: 26px 18px; }
+    #feenav { padding: 56px 0; }
+  }
+  @media (max-width: 600px) {
+    .service-grid-3 { grid-template-columns: 1fr; }
+  }
+
+  /* サービスカード：矢印を下端に揃える */
+  .service-grid-3 .service-link-card { display: flex; flex-direction: column; }
+  .service-grid-3 .service-link-card p:last-of-type { flex: 1; }
+  .service-grid-3 .arrow { display: block; margin-top: auto; }
+
+  @media (max-width: 768px) {
+    .fv-sep { display: none; }
+    .fv-stats { flex-direction: column; align-items: flex-start !important; gap: 6px !important; }
+    .doctor-meta { font-size: 14px; }
+  }
+
+  /* ===== 2026-09-05 追補：スマホ本文・見出しサイズ調整 ===== */
+  @media (max-width: 768px) {
+    /* 見出し */
+    .fv-catch { font-size: 26px; }
+    .section-title { font-size: 22px; }
+    /* 主要本文 16px */
+    .fv-sub { font-size: 16px; }
+    .pain-card p,
+    .guide-card p,
+    .guide-else p,
+    .service-link-card p,
+    .service-catch,
+    .doctor-meta,
+    .fee-box p,
+    .faq-a { font-size: 16px; }
+    .service-grid-3 .arrow { font-size: 15px; letter-spacing: 0; }
+    .btn-line { font-size: 15px; }
+  }
+
+  /* 幅の狭い端末（〜375px）はH1の2行構成を保つため現行サイズを維持 */
+  @media (max-width: 375px) {
+    .fv-catch { font-size: 24px; }
   }
 </style>
 
@@ -553,18 +671,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "対応エリアはどこですか？",
+      "name": "何を依頼すればよいか分からない段階でも相談できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "大阪府内を中心に対応しています。オンライン面談・相談はエリア問わず対応可能です。"
+        "text": "はい。ご相談内容が整理されていなくても構いません。現在困っていることや会社の状況を伺い、産業医としてどのような対応が必要かを整理します。"
       }
     },
     {
       "@type": "Question",
-      "name": "何人から契約できますか？",
+      "name": "産業医契約とスポット相談はどう違いますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "従業員50人以上の事業場から嘱託産業医契約を承っています。50人未満の事業場は顧問契約、単発のご依頼はスポット面談をご利用ください。"
+        "text": "スポット相談は、「今、この判断をしてほしい」という場面で、その時点で必要な面談や就業判断を行います。復職可否、就業上の配慮、高ストレス者面談、健診後の就業判定などが対象です。一方、休職から復職、復職後のフォロー、メンタル不調者への継続対応など、経過を見ながら判断や対応を重ねる場合は、産業医契約が適しています。どちらが適しているか分からない場合は、ご相談内容を伺ったうえでご案内します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "すでに産業医がいる会社でも相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。すでに産業医がいる企業からのご相談にも対応しています。メンタルヘルスや復職・就業判断など、特定の案件についてご相談いただくことも可能です。"
       }
     },
     {
@@ -572,7 +698,15 @@
       "name": "初回無料相談では何を話しますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "貴社の従業員規模・現在の課題・産業医に期待する役割をお聞きします。契約後の支援イメージをご説明します。"
+        "text": "現在のお困りごとや会社の状況を伺い、どのような対応が必要かを整理します。スポット相談、産業医契約、研修など、どの形が適しているか分からない段階でもご相談いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "従業員50人未満でも相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。従業員50人未満の企業からのご相談にも対応しています。継続的な健康管理についてのご相談のほか、個別案件についてはスポットでの対応も可能です。"
       }
     }
   ]
@@ -615,14 +749,13 @@
   <div class="container">
     <div class="fv-inner">
       <div class="fv-tag">精神科医 × 産業医</div>
-      <h1 class="fv-catch">職場のメンタル対応を、<br>人事だけで抱え込ませない</h1>
-      <p class="fv-sub">産業医が、メンタル不調者への対応、復職や就業配慮に関する意見、<br class="pc-br">管理職・現場からの相談を、本人の健康状態と職場の実情を踏まえて整理します。<br class="pc-br">大阪府内・オンライン全国対応。</p>
-      <p class="fv-note">メドワーク産業医事務所は、精神科医であり産業医でもある医師が、企業のメンタルヘルス対応、復職やフォローに関する産業医面談に携わる事務所です。<br class="pc-br">主治医からの医学的情報に加え、社内での状態・人間関係・業務実態を踏まえ、本人の健康と職場全体の安全性・公平性の両面から、現実的な対応方針を整理します。</p>
-      <div class="fv-stats" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-bottom:40px;color:#fff;font-weight:700;font-size:16px;letter-spacing:0.02em;">
-        <span>精神科臨床 25年以上</span>
-        <span style="opacity:0.4;">｜</span>
-        <span>年間 500件超の産業医面談</span>
-        <span style="opacity:0.4;">｜</span>
+      <h1 class="fv-catch">職場のメンタル対応を、<br>人事だけで抱え込ませない。</h1>
+      <p class="fv-sub">本人の健康状態だけでなく、仕事内容や職場の状況、管理職の意見も踏まえ、<br class="pc-br">就業上の判断と職場での対応を支援します。</p>
+      <div class="fv-stats" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:32px 0 40px;color:#fff;font-weight:700;font-size:16px;letter-spacing:0.02em;">
+        <span>精神科臨床25年以上</span>
+        <span class="fv-sep" style="opacity:0.4;">｜</span>
+        <span>年間500件超の産業医面談</span>
+        <span class="fv-sep" style="opacity:0.4;">｜</span>
         <span>製造・食品・IT 業種問わず対応</span>
       </div>
       <div class="fv-buttons">
@@ -633,55 +766,62 @@
   </div>
 </section>
 
-<!-- PAIN -->
+<!-- PAIN（旧pain＋旧scenesを統合） -->
 <section id="pain">
   <div class="container">
-    <span class="section-label">こんな状況が続いていませんか？</span>
-    <h2 class="section-title">人事担当者が<br>一人で抱えている問題</h2>
-    <ul class="pain-list">
-      <li>復職可の診断書。本当に戻して大丈夫？</li>
-      <li>本人は大丈夫、職場は不安、板挟みになる</li>
-      <li>産業医は「様子を見ましょう」という。そのあと、どうすれば？</li>
-      <li>管理職から対応方法の相談、答えたいが判断の根拠がない</li>
-      <li>長期の休職。このまま様子みでいいのか？</li>
-      <li>ストレスチェックはしたけど、そのあとは？</li>
-    </ul>
-    <div class="pain-bridge">
-      その難しい判断は、産業医が早い段階から関わり、意見交換を重ねることで、根拠を持って整理しやすくなります。
+    <h2 class="section-title">こんな場面で、判断に迷っていませんか？</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <h3>主治医から「復職可」。でも、このまま復職させてよいか判断に迷う。</h3>
+        <p>診断書は提出されたが、実際の業務に戻れる状態なのか。戻った場合、どのような配慮が必要なのか。会社として判断に迷っている。</p>
+      </div>
+      <div class="pain-card">
+        <h3>本人は問題ないと言う。でも、職場は不安を感じている。</h3>
+        <p>本人は「働ける」「問題ない」と話している一方で、職場では仕事ぶりや体調面に不安がある。会社として、どこまで本人の言葉を受け止め、どう判断すればよいか迷っている。</p>
+      </div>
+      <div class="pain-card">
+        <h3>メンタル不調の社員に、上司としてどう接すればよいか分からない。</h3>
+        <p>上司から「どう接すればいいのか」「仕事をどこまで任せてよいのか」と相談された。でも、人事としてもどう答えればよいか迷っている。</p>
+      </div>
+      <div class="pain-card">
+        <h3>ストレスチェックを実施した。その後をどうすればよいか分からない。</h3>
+        <p>結果や実施業者からのコメントを受け取ったものの、その内容をどう受け止め、面談や職場での対応につなげればよいか分からない。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SCENES -->
-<section id="scenes">
+<!-- QUICK NAV（ご相談に合わせた対応をご案内します） -->
+<section id="quicknav">
   <div class="container">
-    <span class="section-label">こんな場面で相談できます</span>
-    <h2 class="section-title">人事・管理職が<br>判断に迷いやすい場面</h2>
-    <div class="scenes-grid">
-      <div class="scene-card">
-        <h3>復職させていいか判断できない</h3>
-        <p>主治医の「復職可」を職場の実情と照らし合わせ、産業医の意見としてまとめます。</p>
+    <span class="section-label">Quick Guide</span>
+    <h2 class="section-title">ご相談に合わせた対応をご案内します</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>今ある案件・従業員対応について相談したい</h3>
+        <p>復職・休職、メンタル不調、高ストレス者面談、健診後の対応など。何を依頼すればよいか分からない段階でもご相談いただけます。</p>
+        <a href="/service/spot/" class="btn-line">個別案件の相談について見る →</a>
       </div>
-      <div class="scene-card">
-        <h3>本人・現場・人事の意見がズレている</h3>
-        <p>三者の認識のずれを整理し、受け入れ条件・就業配慮を具体的に言語化します。</p>
+      <div class="guide-card">
+        <h3>産業医・健康管理体制について相談したい</h3>
+        <p>産業医の新規選任や変更、現在の体制の見直し、健康管理体制をゼロから整えたい場合など。何から始めればよいか分からない段階でもご相談いただけます。</p>
+        <a href="/service/advisor/" class="btn-line">産業医契約について見る →</a>
       </div>
-      <div class="scene-card">
-        <h3>不調を本人が認めない</h3>
-        <p>受診勧奨の進め方・伝え方・記録の残し方を、会社の立場から助言します。</p>
+      <div class="guide-card">
+        <h3>料金・対応範囲を確認したい</h3>
+        <p>スポット対応・産業医契約の料金や、対応できる内容をご確認いただけます。</p>
+        <a href="/fee/" class="btn-line">料金・サービス内容を見る →</a>
       </div>
-      <div class="scene-card">
-        <h3>管理職が一人で抱え込んでいる</h3>
-        <p>管理職が適切に動けるよう、会社としての対応方針を整理します。</p>
+      <div class="guide-card">
+        <h3>研修・講話について相談したい</h3>
+        <p>管理職向けラインケア研修、メンタルヘルス、安全衛生に関する講話など。</p>
+        <a href="/service/training/" class="btn-line">研修・講話について見る →</a>
       </div>
-      <div class="scene-card">
-        <h3>休職が長引き、次の手が見えない</h3>
-        <p>対応が止まりがちなフェーズで、次の一手を産業医の立場から助言します。</p>
-      </div>
-      <div class="scene-card">
-        <h3>ストレスチェック後の動き方が分からない</h3>
-        <p>高ストレス者面談・職場改善につながる動き方を、一緒に整理します。</p>
-      </div>
+    </div>
+    <div class="guide-else">
+      <h3>どれを選べばよいか分からない方・いずれにも当てはまらない方へ</h3>
+      <p>ご相談内容が整理されていなくても構いません。現在の状況を伺い、必要な対応をご案内します。</p>
+      <a href="/contact/" class="btn-primary">初回30分 無料相談を申し込む →</a>
     </div>
   </div>
 </section>
@@ -690,72 +830,35 @@
 <section id="strength">
   <div class="container">
     <span class="section-label">Why Us</span>
-    <h2 class="section-title">メドワーク産業医事務所が<br>選ばれる理由</h2>
+    <h2 class="section-title">メドワークの3つの強み</h2>
     <div class="strength-cards">
       <div class="strength-card">
         <div class="strength-card-header">
           <div class="strength-num">1</div>
-          <h3>精神科医×産業医だから、主治医の情報と職場の実情をつなげて考えられる</h3>
+          <h3>本人に何が起きているのか。職場で何が起きているのか。その両方から考える。</h3>
         </div>
         <div class="strength-card-body">
-          <p>主治医は患者本人の治療と回復を支える立場です。一方で産業医は、本人の健康状態に加え、職場環境、業務内容、職場全体の負荷・受け入れ体制、会社としての安全配慮も踏まえて、就業上の対応を検討します。</p>
-          <p>同じ「復職可能」という診断書でも、職場で本当に就労継続できるかどうかは別の問題です。精神科医としての臨床経験と、産業医としての職場理解の両方から、現実的な対応方針を整理します。</p>
+          <p>精神科臨床では、本人の症状だけでなく、その人を取り巻く環境をあわせて捉えることが重要です。例えば、業務量や仕事の難しさ、役割、指示のあり方、人間関係など。本人の健康状態と職場で起きていることの両方から、状況を整理します。</p>
         </div>
       </div>
       <div class="strength-card">
         <div class="strength-card-header">
           <div class="strength-num">2</div>
-          <h3>「様子を見ましょう」で終わらせない</h3>
+          <h3>「様子を見ましょう」で終わらせない。</h3>
         </div>
         <div class="strength-card-body">
-          <p>メンタル不調対応で人事担当者が困るのは、医学的な説明だけでなく、「次にどう動くべきか」が見えないことです。面談結果を踏まえ、就業上の配慮、管理職への共有範囲、再発予防の視点、会社として備えておくべき対応を、医学的・産業保健的な観点から整理します。</p>
-          <ul class="strength-bullets">
-            <li>復職や就業配慮に関する意見</li>
-            <li>管理職への伝え方・再発予防の視点</li>
-            <li>会社として備えておくべき対応</li>
-          </ul>
+          <p>何を目指すのか、いつまでに確認するのか、何をもって次の判断をするのか。必要に応じて目標や途中の目安を設定し、会社が次の対応に進める形にします。</p>
         </div>
       </div>
       <div class="strength-card">
         <div class="strength-card-header">
           <div class="strength-num">3</div>
-          <h3>企業規模に合わせて対応</h3>
+          <h3>「正しい判断」だけでなく、「実行できる対応」を考える。</h3>
         </div>
         <div class="strength-card-body">
-          <p>従業員50人以上の産業医契約だけでなく、50人未満の企業向け顧問契約、休職・復職に関するスポット面談、管理職向けラインケア研修にも対応しています。</p>
-          <p>既に産業医がいる企業でも、既存の産業保健体制にメンタルヘルス対応の専門性を加える形でご相談いただけます。</p>
+          <p>医学的に妥当な対応でも、実際の職場で実行できなければ続きません。本人の状態だけでなく、仕事内容や職場の体制も踏まえ、現場で実際に運用できる対応を考えます。</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="service">
-  <div class="container">
-    <span class="section-label">Services</span>
-    <h2 class="section-title">対応サービス</h2>
-    <div class="service-grid">
-      <a href="/service/advisor/" class="service-link-card">
-        <h3>産業医契約</h3>
-        <p>法定業務に加え、メンタルヘルス対応、休職・復職支援、管理職への助言まで継続的に支援します。</p>
-        <span class="arrow">詳しく見る →</span>
-      </a>
-      <a href="/service/spot/" class="service-link-card">
-        <h3>スポット面談</h3>
-        <p>今すぐ判断が必要なメンタル不調対応・復職判断の案件に対応します。</p>
-        <span class="arrow">詳しく見る →</span>
-      </a>
-      <a href="/service/training/" class="service-link-card">
-        <h3>ラインケア研修</h3>
-        <p>管理職が部下の不調に気づき、抱え込まず、適切につなぐための実践的な研修です。</p>
-        <span class="arrow">詳しく見る →</span>
-      </a>
-      <a href="/profile/" class="service-link-card">
-        <h3>代表医師プロフィール</h3>
-        <p>精神科医・産業医として、企業のメンタルヘルス対応に関わってきた代表医師の経歴をご紹介します。</p>
-        <span class="arrow">詳しく見る →</span>
-      </a>
     </div>
   </div>
 </section>
@@ -786,34 +889,60 @@
   </div>
 </section>
 
-<!-- QUICK NAV -->
-<section id="quicknav">
+<!-- SERVICES -->
+<section id="service">
   <div class="container">
-    <span class="section-label">Quick Guide</span>
-    <h2 class="section-title">迷ったときの目安</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">1</span>従業員50人以上で産業医が未選任の場合</div>
-        <div class="faq-a">産業医の選任は労働安全衛生法上の義務です。嘱託産業医契約をご検討ください。</div>
-        <a href="/service/advisor/" class="faq-link">→ 嘱託産業医契約はこちら</a>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">2</span>従業員50人未満の場合</div>
-        <div class="faq-a">選任義務はありません。継続的に相談できる専門家を確保したい場合は、顧問契約をご検討ください。</div>
-        <a href="/service/advisor/" class="faq-link">→ 顧問契約はこちら</a>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">3</span>必要な案件だけ、その都度依頼したい場合</div>
-        <div class="faq-a">既に産業医が選任されている場合も、未選任の場合も、スポット面談をご利用いただけます。休職・復職面談、高ストレス者面談などの単発相談に、産業医としての見解を提供します。</div>
-        <a href="/service/spot/" class="faq-link">→ スポット面談はこちら</a>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">4</span>契約するかどうかも含めて、判断がつかない場合</div>
-        <div class="faq-a">無料相談で、産業医サービスが必要な状態か、必要ならどのサービスがよいかも含めてご案内します。</div>
-        <a href="/contact/" class="faq-link">→ 無料相談はこちら</a>
+    <span class="section-label">Services</span>
+    <h2 class="section-title">対応サービス</h2>
+    <div class="service-grid-3">
+      <a href="/service/advisor/" class="service-link-card">
+        <h3>産業医契約</h3>
+        <p class="service-catch">職場の健康管理と、継続的な従業員対応を支援します。</p>
+        <p>法定の産業医業務に加え、メンタル不調者への対応、休職・復職支援、人事・管理職からの相談など、経過を見ながら継続的に対応します。</p>
+        <span class="arrow">産業医契約について詳しく見る&nbsp;→</span>
+      </a>
+      <a href="/service/spot/" class="service-link-card">
+        <h3>スポット相談</h3>
+        <p class="service-catch">必要な場面で、面談・就業判断を行います。</p>
+        <p>復職可否、就業上の配慮、高ストレス者面談、健診後の就業判定など、その時点で必要な面談や判断に対応します。</p>
+        <span class="arrow">スポット相談について詳しく見る&nbsp;→</span>
+      </a>
+      <a href="/service/training/" class="service-link-card">
+        <h3>研修・講話</h3>
+        <p class="service-catch">職場で実践できる内容を、分かりやすく伝えます。</p>
+        <p>管理職向けラインケア研修、メンタルヘルス、安全衛生など、企業の課題や対象者に合わせて実施します。</p>
+        <span class="arrow">研修・講話について詳しく見る&nbsp;→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section id="doctor">
+  <div class="container">
+    <h2 class="section-title">代表医師</h2>
+    <div class="doctor-card">
+      <img src="/images/profile.jpg" class="doctor-photo" alt="代表産業医 菅谷真之">
+      <div>
+        <div class="doctor-name"><span>代表産業医</span>菅谷 真之</div>
+        <div class="doctor-meta">
+          精神科専門医／精神保健指定医／産業医<br>
+          精神科臨床25年以上・年間500件超の産業医面談
+        </div>
+        <a href="/profile/" class="btn-line">代表医師プロフィールを見る →</a>
       </div>
     </div>
-    <p style="margin-top:20px; font-size:15px; line-height:1.85; color:#666;">※既に産業医がいる場合でも、メンタルヘルス対応の専門性を追加したいときは、既存の体制を維持したまま追加でご契約いただけます。詳しくは<a href="/service/advisor/" style="color:var(--teal); font-weight:700; text-decoration:underline;">産業医契約ページ</a>をご覧ください。</p>
+  </div>
+</section>
+
+<!-- FEE NAV -->
+<section id="feenav">
+  <div class="container">
+    <h2 class="section-title">料金・契約について</h2>
+    <div class="fee-box">
+      <p>産業医契約、スポット相談、研修・講話など、サービスごとの料金をご案内しています。</p>
+      <a href="/fee/" class="btn-line">料金・サービス内容を見る →</a>
+    </div>
   </div>
 </section>
 
@@ -824,16 +953,27 @@
     <h2 class="section-title">よくある質問</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">Q</span>対応エリアはどこですか？</div>
-        <div class="faq-a">大阪府内を中心に対応しています。オンライン面談・相談はエリア問わず対応可能です。</div>
+        <div class="faq-q"><span class="faq-q-mark">Q</span>何を依頼すればよいか分からない段階でも相談できますか？</div>
+        <div class="faq-a"><p>はい。ご相談内容が整理されていなくても構いません。現在困っていることや会社の状況を伺い、産業医としてどのような対応が必要かを整理します。</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-mark">Q</span>何人から契約できますか？</div>
-        <div class="faq-a">従業員50人以上の事業場から嘱託産業医契約を承っています。50人未満の事業場は顧問契約、単発のご依頼はスポット面談をご利用ください。</div>
+        <div class="faq-q"><span class="faq-q-mark">Q</span>産業医契約とスポット相談はどう違いますか？</div>
+        <div class="faq-a">
+          <p>スポット相談は、「今、この判断をしてほしい」という場面で、その時点で必要な面談や就業判断を行います。復職可否、就業上の配慮、高ストレス者面談、健診後の就業判定などが対象です。</p>
+          <p>一方、休職から復職、復職後のフォロー、メンタル不調者への継続対応など、経過を見ながら判断や対応を重ねる場合は、産業医契約が適しています。どちらが適しているか分からない場合は、ご相談内容を伺ったうえでご案内します。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q</span>すでに産業医がいる会社でも相談できますか？</div>
+        <div class="faq-a"><p>はい。すでに産業医がいる企業からのご相談にも対応しています。メンタルヘルスや復職・就業判断など、特定の案件についてご相談いただくことも可能です。</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q</span>初回無料相談では何を話しますか？</div>
-        <div class="faq-a">貴社の従業員規模・現在の課題・産業医に期待する役割をお聞きします。契約後の支援イメージをご説明します。</div>
+        <div class="faq-a"><p>現在のお困りごとや会社の状況を伺い、どのような対応が必要かを整理します。スポット相談、産業医契約、研修など、どの形が適しているか分からない段階でもご相談いただけます。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-mark">Q</span>従業員50人未満でも相談できますか？</div>
+        <div class="faq-a"><p>はい。従業員50人未満の企業からのご相談にも対応しています。継続的な健康管理についてのご相談のほか、個別案件についてはスポットでの対応も可能です。</p></div>
       </div>
     </div>
   </div>
@@ -842,8 +982,8 @@
 <!-- CTA -->
 <section id="cta">
   <div class="container">
-    <h2 class="section-title">まずは無料でご相談ください</h2>
-    <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
+    <h2 class="section-title">何を依頼すればよいか決まっていなくても構いません。</h2>
+    <p class="cta-lead">現在の状況を伺い、必要な対応を整理します。まずは初回30分の無料相談をご利用ください。</p>
     <a href="/contact/" class="btn-primary" style="font-size:17px; padding:18px 44px;">初回30分 無料相談を申し込む →</a>
   </div>
 </section>
