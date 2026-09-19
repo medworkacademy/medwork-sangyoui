@@ -260,21 +260,20 @@
   #cases { background: var(--gray-bg); }
   .cases-table-wrap { overflow-x: auto; }
   .cases-sp { display: none; }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
-  thead tr { background: var(--navy); color: #fff; }
-  thead th { padding: 16px 22px; text-align: left; font-weight: 700; letter-spacing: 0.04em; }
-  thead th:nth-child(1) { width: 80px; }
-  thead th:nth-child(2) { width: 110px; }
-  thead th:nth-child(3) { width: 220px; }
-  thead th:nth-child(4) { width: auto; }
-  tbody tr { border-bottom: 1px solid var(--gray-line); }
-  tbody tr:nth-child(even) { background: #fff;
-    overflow-x: hidden; }
-  tbody tr:nth-child(odd) { background: var(--gray-bg); }
-  tbody td { padding: 16px 22px; vertical-align: top; }
-  tbody td:nth-child(1),
-  tbody td:nth-child(2),
-  tbody td:nth-child(3) { white-space: nowrap; }
+  .cases-table-wrap table { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
+  .cases-table-wrap thead tr { background: var(--navy); color: #fff; }
+  .cases-table-wrap thead th { padding: 16px 22px; text-align: left; font-weight: 700; letter-spacing: 0.04em; }
+  .cases-table-wrap thead th:nth-child(1) { width: 80px; }
+  .cases-table-wrap thead th:nth-child(2) { width: 110px; }
+  .cases-table-wrap thead th:nth-child(3) { width: 220px; }
+  .cases-table-wrap thead th:nth-child(4) { width: auto; }
+  .cases-table-wrap tbody tr { border-bottom: 1px solid var(--gray-line); }
+  .cases-table-wrap tbody tr:nth-child(even) { background: #fff; }
+  .cases-table-wrap tbody tr:nth-child(odd) { background: var(--gray-bg); }
+  .cases-table-wrap tbody td { padding: 16px 22px; vertical-align: top; }
+  .cases-table-wrap tbody td:nth-child(1),
+  .cases-table-wrap tbody td:nth-child(2),
+  .cases-table-wrap tbody td:nth-child(3) { white-space: nowrap; }
 
   /* ===== STAGES ===== */
   #stages { background: var(--gray-bg); }
@@ -355,6 +354,8 @@
   .visit-table-wrap table { width: 100%; border-collapse: collapse; font-size: 15px; }
   .visit-table-wrap th, .visit-table-wrap td { border-bottom: 1px solid #e3e6ea; padding: 12px 14px; text-align: left; vertical-align: top; }
   .visit-table-wrap th { background: var(--teal-light); font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .visit-table-wrap tbody tr:nth-child(odd) { background: var(--gray-bg); }
+  .visit-table-wrap tbody tr:nth-child(even) { background: #fff; }
 
   .faq-list { display: grid; gap: 12px; }
   .faq-item {
