@@ -404,6 +404,20 @@
     .logo span { font-size: 10px; padding: 3px 7px; margin-right: 8px; }
     header { padding: 0 16px; }
   }
+
+  /* 中間幅（769〜919px）ではナビが7項目とも2行に折れるためハンバーガーに切り替える */
+  @media (min-width: 769px) and (max-width: 919px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+  }
+  /* 狭い端末でロゴとハンバーガーが密着するのを防ぐ */
+  header { gap: 12px; }
+  .hamburger { flex-shrink: 0; }
+  .logo { min-width: 0; }
+
+  .btn-primary-lg { font-size: 17px; padding: 18px 44px; }
+  @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
+  @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
 </style>
 </head>
 <body>
@@ -566,7 +580,7 @@
   <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
-    <a href="/contact/" class="btn-primary" style="font-size:17px; padding:18px 44px;">初回30分 無料相談を申し込む →</a>
+    <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
   </div>
 </section>
 

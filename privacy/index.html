@@ -68,7 +68,13 @@
   .footer-bottom { max-width: 900px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
   footer a { color: rgba(255,255,255,0.5); }
   footer a:hover { color: rgba(255,255,255,0.8); }
-  @media (max-width: 768px) { header { padding: 0 16px; } nav { display: none; } .logo { font-size: 14px; white-space: normal; } .logo span { font-size: 10px; padding: 2px 6px; margin-right: 6px; } .hero-h1 { font-size: 26px; } .footer-grid { grid-template-columns: 1fr; } }
+  .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+  .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; }
+  .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:var(--navy); z-index:99; flex-direction:column; padding:16px 0; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:rgba(255,255,255,0.85); font-size:16px; padding:14px 24px; border-bottom:1px solid rgba(255,255,255,0.1); font-weight:500; }
+  .mobile-menu-cta { background:var(--accent); color:#fff !important; margin:16px 24px 0; padding:14px 24px !important; border-radius:4px; text-align:center; font-weight:700 !important; border-bottom:none !important; }
+  @media (max-width: 768px) { header { padding: 0 16px; } nav { display: none; } .hamburger { display: flex; } .btn-nav-cta { display: none; } .container { padding: 0 16px; } .logo { font-size: 14px; white-space: normal; } .logo span { font-size: 10px; padding: 2px 6px; margin-right: 6px; } .hero-h1 { font-size: 26px; } .footer-grid { grid-template-columns: 1fr; } }
 
   /* === スマホフォント調整 === */
   @media (max-width: 768px) {
@@ -87,6 +93,16 @@
     .logo span { font-size: 10px; padding: 3px 7px; margin-right: 8px; }
     header { padding: 0 16px; }
   }
+
+  /* 中間幅（769〜919px）ではナビが7項目とも2行に折れるためハンバーガーに切り替える */
+  @media (min-width: 769px) and (max-width: 919px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+  }
+  /* 狭い端末でロゴとハンバーガーが密着するのを防ぐ */
+  header { gap: 12px; }
+  .hamburger { flex-shrink: 0; }
+  .logo { min-width: 0; }
 </style>
 </head>
 <body>
@@ -101,7 +117,21 @@
     <a href="/profile/">プロフィール</a>
     <a href="/contact/" class="btn-nav-cta">無料相談</a>
   </nav>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">トップ</a>
+  <a href="/#quicknav">サービスの選び方</a>
+  <a href="/service/advisor/">産業医契約</a>
+  <a href="/service/spot/">スポット面談</a>
+  <a href="/service/training/">研修</a>
+  <a href="/fee/">料金</a>
+  <a href="/profile/">プロフィール</a>
+  <a href="/contact/" class="mobile-menu-cta">無料相談</a>
+</div>
 
 <section id="page-hero">
   <div class="container">
@@ -193,5 +223,10 @@
     <div style="display:flex; gap:16px; flex-wrap:wrap;"><a href="/fee/">料金・契約形態の選び方</a><a href="/fukushoku-mendan/">復職面談の流れ</a><a href="/privacy/">プライバシーポリシー</a></div>
   </div>
 </footer>
+
+<script>
+  var hb=document.getElementById("hamburger"),mm=document.getElementById("mobileMenu");
+  if(hb&&mm){hb.addEventListener("click",function(){mm.classList.toggle("open");});mm.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mm.classList.remove("open");});});}
+</script>
 </body>
 </html>

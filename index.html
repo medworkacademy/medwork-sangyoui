@@ -642,6 +642,16 @@
     .fee-box p,
     .faq-a { font-size: 16px; }
   }
+
+  /* 中間幅（769〜919px）ではナビが7項目とも2行に折れるためハンバーガーに切り替える */
+  @media (min-width: 769px) and (max-width: 919px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+  }
+  /* 狭い端末でロゴとハンバーガーが密着するのを防ぐ */
+  header { gap: 12px; }
+  .hamburger { flex-shrink: 0; }
+  .logo { min-width: 0; }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
