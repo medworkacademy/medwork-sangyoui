@@ -401,6 +401,11 @@
   .btn-primary-lg { font-size: 17px; padding: 18px 44px; }
   @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->

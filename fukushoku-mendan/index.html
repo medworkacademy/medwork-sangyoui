@@ -419,6 +419,11 @@
   .btn-primary-lg { font-size: 17px; padding: 18px 44px; }
   @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -497,7 +502,7 @@
   <section id="steps">
     <div class="container">
       <span class="section-label">全体の流れ</span>
-      <h2 class="section-title">復職までの<br>6ステップ</h2>
+      <h2 class="section-title">復職までの6ステップ</h2>
       <div class="point-box"><p class="point-box-title">STEP 1｜主治医の「復職可能」診断書の提出</p>本人が主治医から診断書を受け取り、会社に復職を申し出ます。</div>
       <div class="point-box"><p class="point-box-title">STEP 2｜会社での受付・情報整理</p>休職前の業務内容、休職期間、勤怠の記録、職場の受け入れ状況を整理します。</div>
       <div class="point-box"><p class="point-box-title">STEP 3｜産業医による復職前面談</p>本人と産業医が面談し、職場で就業できる状態かを確認します（確認内容は下記）。</div>
@@ -510,7 +515,7 @@
   <section id="checks">
     <div class="container">
       <span class="section-label">面談で確認すること</span>
-      <h2 class="section-title">復職前面談で産業医が<br>確認すること</h2>
+      <h2 class="section-title">復職前面談で産業医が確認すること</h2>
       <ul class="check-list">
         <li>生活リズムが整っているか（起床・睡眠・日中の活動）</li>
         <li>症状が安定し、通院・治療が継続できているか</li>
@@ -526,7 +531,7 @@
   <section id="difference">
     <div class="container">
       <span class="section-label">役割の違い</span>
-      <h2 class="section-title">主治医の診断書と<br>産業医の意見はどう違うのか</h2>
+      <h2 class="section-title">主治医の診断書と産業医の意見はどう違うのか</h2>
       <div class="intro-scene">主治医は治療と回復を支える立場であり、産業医は、職場で安全に就業できるか、どのような配慮が必要かを確認する立場です。<br>両者の意見が異なることは実際にあります。<br><br>主治医の医学的情報を尊重したうえで、業務内容・職場環境・受け入れ体制を踏まえて就業上の意見を整理するのが、産業医の役割です。</div>
     </div>
   </section>
@@ -534,7 +539,7 @@
   <section id="prepare">
     <div class="container">
       <span class="section-label">人事の準備</span>
-      <h2 class="section-title">面談前に準備しておくと<br>よいもの</h2>
+      <h2 class="section-title">面談前に準備しておくとよいもの</h2>
       <ul class="bullet-list">
         <li>休職前の業務内容と勤務状況（勤怠記録）</li>
         <li>休職の経緯（分かる範囲で）</li>

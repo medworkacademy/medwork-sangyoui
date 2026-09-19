@@ -481,6 +481,11 @@
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
 
   @media (max-width: 768px) { .hero-h1 br { display: none; } }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -632,7 +637,7 @@
 <section id="branch">
   <div class="container">
     <span class="section-label">契約の選び方</span>
-    <h2 class="section-title">事業場の規模と<br>現在の産業医体制で、契約の形が変わります</h2>
+    <h2 class="section-title">事業場の規模と現在の産業医体制で、契約の形が変わります</h2>
 
     <h3 style="font-size:18px;color:var(--navy);margin:28px 0 10px;">従業員50人以上・産業医が未選任の場合</h3>
     <p>常時50人以上の労働者を使用する事業場では、産業医の選任が必要です（労働安全衛生法13条1項、労働安全衛生法施行令5条）。選任すべき事由が発生した日から<strong>14日以内</strong>に選任し、遅滞なく所轄労働基準監督署長に報告します（労働安全衛生規則13条1項・2項）。</p>
@@ -657,7 +662,7 @@
 <section id="forwho">
   <div class="container">
     <span class="section-label">こんな企業に</span>
-    <h2 class="section-title">このような企業に<br>向いています</h2>
+    <h2 class="section-title">このような企業に向いています</h2>
     <ul class="check-list">
       <li>従業員50人以上となり、産業医を選任する必要がある</li>
       <li>休職・復職の案件が続いており、その都度対応する形では追いつかなくなっている</li>
@@ -674,7 +679,7 @@
 <section id="whatwedo">
   <div class="container">
     <span class="section-label">対応内容</span>
-    <h2 class="section-title">産業医契約で<br>対応できる内容</h2>
+    <h2 class="section-title">産業医契約で対応できる内容</h2>
     <p class="point-lead">産業医契約で行う業務には、法令に基づく産業保健業務と、企業の状況に応じて行うメンタルヘルス対応があります。次の2つのセクションで、それぞれを詳しく説明します。</p>
     <ul class="bullet-list">
       <li>職場巡視</li>
@@ -694,7 +699,7 @@
 <section id="duties">
   <div class="container">
     <span class="section-label">法定業務</span>
-    <h2 class="section-title">50人以上の事業場で<br>産業医が担う主な業務</h2>
+    <h2 class="section-title">50人以上の事業場で産業医が担う主な業務</h2>
 
     <p class="point-lead">産業医の職務は、労働安全衛生規則14条1項に9つ挙げられています。</p>
     <div class="point-box">
@@ -843,7 +848,7 @@
 <section id="vs-spot">
   <div class="container">
     <span class="section-label">選び方</span>
-    <h2 class="section-title">スポット面談と<br>継続契約の違い</h2>
+    <h2 class="section-title">スポット面談と継続契約の違い</h2>
 
     <h3 style="font-size:18px;color:var(--navy);margin:28px 0 12px;">一つの案件を整理するのがスポット面談</h3>
     <p>復職の可否について意見がほしい。休職に入れるべきかを判断してほしい。この一件について産業医の意見が必要だ。こうした場合は、スポット面談で対応できます。その案件について必要な情報を集め、判断し、会社に意見を返します。</p>

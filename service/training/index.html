@@ -381,6 +381,11 @@
   .btn-primary-lg { font-size: 17px; padding: 18px 44px; }
   @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -440,7 +445,7 @@
 <section id="forwho">
   <div class="container">
     <span class="section-label">こんな企業に</span>
-    <h2 class="section-title">このような企業に<br>向いています</h2>
+    <h2 class="section-title">このような企業に向いています</h2>
     <ul class="check-list">
       <li>管理職が部下のメンタル不調対応に不安を感じている</li>
       <li>対応が管理職ごとにばらついている</li>
@@ -493,7 +498,7 @@
 <section id="mindset">
   <div class="container">
     <span class="section-label">研修で大切にしていること</span>
-    <h2 class="section-title">管理職が一人で<br>抱え込まないために</h2>
+    <h2 class="section-title">管理職が一人で抱え込まないために</h2>
     <div class="intro-text">
       <p>ラインケアで重要なのは、管理職が一人で抱え込まないことです。部下の不調に気づいたとき、管理職がすべてを解決しようとすると、本人にとっても職場にとっても負担が大きくなることがあります。</p>
       <p>必要なのは、早い段階で変化に気づき、適切に声をかけ、必要なタイミングで人事や産業医につなぐことです。本人への配慮と、職場全体の安全性・公平性を両立させるために、管理職が持つべき実践的な判断軸をお伝えします。</p>

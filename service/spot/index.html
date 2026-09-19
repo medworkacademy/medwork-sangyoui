@@ -422,6 +422,11 @@
   .btn-primary-lg { font-size: 17px; padding: 18px 44px; }
   @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -484,7 +489,7 @@
 <section id="caselist">
   <div class="container">
     <span class="section-label">こんな場合に</span>
-    <h2 class="section-title">このような場合に<br>ご相談ください</h2>
+    <h2 class="section-title">このような場合にご相談ください</h2>
     <ul class="check-list">
       <li>勤務継続・休職・復職について、産業医の意見を確認したい</li>
       <li>主治医の診断書だけで復職対応を進めてよいか不安がある</li>
@@ -500,7 +505,7 @@
 <section id="whatwedo">
   <div class="container">
     <span class="section-label">対応内容</span>
-    <h2 class="section-title">スポット面談で<br>対応できる内容</h2>
+    <h2 class="section-title">スポット面談で対応できる内容</h2>
     <ul class="bullet-list">
       <li>休職者の復職前面談、メンタル不調者への就業上の評価</li>
       <li>復職に関する医学的・産業保健的評価</li>
@@ -516,7 +521,7 @@
 <section id="point">
   <div class="container">
     <span class="section-label">精神科医×産業医の視点</span>
-    <h2 class="section-title">産業医が見る<br>復職判断のポイント ― 精神科臨床の視点から</h2>
+    <h2 class="section-title">産業医が見る復職判断のポイント<br>― 精神科臨床の視点から</h2>
     <p class="point-lead">復職に関する意見では、症状が軽くなっているかだけでは不十分です。</p>
     <div class="point-box">
       <p class="point-box-title">重要なのは、以下を総合的に見ることです</p>

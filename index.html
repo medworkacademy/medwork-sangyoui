@@ -655,6 +655,11 @@
   header { gap: 12px; }
   .hamburger { flex-shrink: 0; }
   .logo { min-width: 0; }
+
+  /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
+  @media (max-width: 768px) {
+    h1 br, h2 br, h3 br { display: none; }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -906,7 +911,7 @@
 <section id="cases">
   <div class="container">
     <span class="section-label">Cases</span>
-    <h2 class="section-title">業種・企業規模別<br>契約事例</h2>
+    <h2 class="section-title">業種・企業規模別契約事例</h2>
     <div class="cases-table-wrap">
       <table>
         <thead>
