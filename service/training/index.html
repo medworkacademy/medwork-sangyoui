@@ -258,7 +258,6 @@
     border-top: 4px solid var(--teal);
     padding: 36px 40px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    max-width: 560px;
   }
   .price-label {
     font-size: 13px;
@@ -399,6 +398,14 @@
     letter-spacing: 0.02em; margin-top: 10px;
   }
   @media (max-width: 768px) { .price-amount.is-text { font-size: 17px; } }
+
+  /* 金額：スマホで数字と単位が別行に割れないよう、わずかに縮める */
+  @media (max-width: 768px) {
+    .price-amount { font-size: 22px; }
+    .price-amount span { font-size: 14px !important; }
+  }
+  /* 見出しの末尾1文字が孤立するのを避ける（対応ブラウザのみ） */
+  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 { text-wrap: pretty; }
 </style>
 </head>
 <body>
@@ -548,7 +555,7 @@
     <h2 class="section-title">研修の料金</h2>
     <div class="price-card">
       <div class="price-label">管理職向けメンタルヘルス研修</div>
-      <div class="price-amount">別途お見積もり <span>（内容・規模による）</span></div>
+      <div class="price-amount is-text">別途お見積もり <span>（内容・規模による）</span></div>
       <div class="price-detail">
         <strong>対応形式：</strong>オンライン・訪問対応<br>
         <strong>対象：</strong>管理職・人事担当者

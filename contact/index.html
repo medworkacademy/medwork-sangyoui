@@ -366,6 +366,14 @@
   @media (max-width: 768px) {
     h1 br, h2 br, h3 br { display: none; }
   }
+
+  /* 金額：スマホで数字と単位が別行に割れないよう、わずかに縮める */
+  @media (max-width: 768px) {
+    .price-amount { font-size: 22px; }
+    .price-amount span { font-size: 14px !important; }
+  }
+  /* 見出しの末尾1文字が孤立するのを避ける（対応ブラウザのみ） */
+  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 { text-wrap: pretty; }
 </style>
 </head>
 <body>
