@@ -312,7 +312,7 @@
 
   /* ===== FAQ ===== */
   #faq { background: var(--gray-bg); }
-  .faq-list { display: grid; gap: 12px; }
+  .faq-list { display: grid; gap: 16px; }
   .faq-item {
     background: #fff;
     border-radius: 8px;
@@ -661,6 +661,11 @@
   /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
   @media (max-width: 768px) {
     h1 br, h2 br, h3 br { display: none; }
+  }
+
+  /* FAQ：スマホでは回答の左インデント(62px)が読み幅を38px削るため解除する */
+  @media (max-width: 768px) {
+    .faq-a { padding-left: 24px; }
   }
 </style>
 

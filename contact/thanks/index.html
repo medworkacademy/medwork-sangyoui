@@ -303,7 +303,7 @@
   /* ===== FAQ ===== */
   #faq { background: #fff;
     overflow-x: hidden; }
-  .faq-list { display: grid; gap: 12px; }
+  .faq-list { display: grid; gap: 16px; }
   .faq-item {
     background: var(--gray-bg);
     border-radius: 8px;
@@ -422,6 +422,22 @@
   @media (max-width: 768px) {
     h1 br, h2 br, h3 br { display: none; }
   }
+
+  /* FAQ：スマホでは回答の左インデント(62px)が読み幅を38px削るため解除する */
+  @media (max-width: 768px) {
+    .faq-a { padding-left: 24px; }
+  }
+
+  /* 料金カード：見出しが括弧内で割れるのを防ぎ、区切り(／)で改行させる */
+  .price-label { word-break: keep-all; overflow-wrap: anywhere; }
+  /* 金額の単位が途中で割れないようにする */
+  .price-amount span { white-space: nowrap; }
+  /* 数値でない表記（別途お見積り等）は金額と同じ大きさにしない */
+  .price-amount.is-text {
+    font-size: 18px; font-weight: 700; color: var(--text-sub);
+    letter-spacing: 0.02em; margin-top: 10px;
+  }
+  @media (max-width: 768px) { .price-amount.is-text { font-size: 17px; } }
 </style>
 </head>
 <body>

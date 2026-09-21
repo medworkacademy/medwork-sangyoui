@@ -357,7 +357,7 @@
   .visit-table-wrap tbody tr:nth-child(odd) { background: var(--gray-bg); }
   .visit-table-wrap tbody tr:nth-child(even) { background: #fff; }
 
-  .faq-list { display: grid; gap: 12px; }
+  .faq-list { display: grid; gap: 16px; }
   .faq-item {
     background: #fff;
     overflow-x: hidden;
@@ -487,6 +487,11 @@
   /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
   @media (max-width: 768px) {
     h1 br, h2 br, h3 br { display: none; }
+  }
+
+  /* FAQ：スマホでは回答の左インデント(62px)が読み幅を38px削るため解除する */
+  @media (max-width: 768px) {
+    .faq-a { padding-left: 24px; }
   }
 </style>
 <script type="application/ld+json">
