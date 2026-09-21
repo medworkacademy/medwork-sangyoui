@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>産業医の料金はどう決まる？契約形態の選び方｜メドワーク産業医事務所</title>
-<meta name="description" content="産業医の料金は「契約形態×事業場規模×対応範囲」で決まります。嘱託産業医契約・顧問契約（50人未満／既存産業医へのメンタル追加）・復職面談パッケージ・スポット面談・研修の違いと選び方を、大阪の精神科医×産業医が整理します。">>
+<meta name="description" content="産業医の料金は「契約形態×事業場規模×対応範囲」で決まります。嘱託産業医契約・顧問契約（50人未満／既存産業医へのメンタル追加）・復職面談パッケージ・スポット面談・研修の違いと選び方を、大阪の精神科医×産業医が整理します。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://medwork-sangyoui.jp/fee/">
 <meta property="og:title" content="産業医の料金はどう決まる？契約形態の選び方｜メドワーク産業医事務所">
@@ -424,8 +424,10 @@
     header { padding: 0 16px; }
   }
 
-  /* 中間幅（769〜919px）ではナビが7項目とも2行に折れるためハンバーガーに切り替える */
-  @media (min-width: 769px) and (max-width: 919px) {
+  /* ナビ7項目が1行に収まるのはレイアウト幅908px以上。メディアクエリはスクロールバーを
+     含む幅で判定されるため、従来型スクロールバー(15px)環境を考慮し923pxまでを
+     ハンバーガーに切り替える（908+15=923） */
+  @media (min-width: 769px) and (max-width: 923px) {
     nav { display: none; }
     .hamburger { display: flex; }
   }
