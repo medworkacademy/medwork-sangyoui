@@ -668,13 +668,14 @@
     .faq-a { padding-left: 24px; }
   }
 
-  /* 金額：スマホで数字と単位が別行に割れないよう、わずかに縮める */
-  @media (max-width: 768px) {
-    .price-amount { font-size: 22px; }
-    .price-amount span { font-size: 14px !important; }
-  }
+  /* 金額：数字と単位はそれぞれ意味のまとまりとして折り返す。
+     単位の途中や末尾1文字だけで割れないよう、単位を分割不可にする */
+  .price-amount span { white-space: nowrap; }
   /* 見出しの末尾1文字が孤立するのを避ける（対応ブラウザのみ） */
-  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 { text-wrap: pretty; }
+  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 {
+    text-wrap: pretty;
+    text-wrap: balance;
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -720,7 +721,7 @@
     "ラインケア研修",
     "ストレスチェック後の対応"
   ],
-  "priceRange": "スポット面談22,000円（税込）／30分〜、顧問契約55,000円（税込）／月〜、嘱託産業医契約88,000円（税込）／月〜"
+  "priceRange": "スポット面談22,000円（税込）／30分〜、顧問契約55,000円（税込）〜／月、嘱託産業医契約88,000円（税込）〜／月"
 }
 </script>
 <script type="application/ld+json">

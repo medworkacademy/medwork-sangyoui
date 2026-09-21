@@ -399,13 +399,48 @@
   }
   @media (max-width: 768px) { .price-amount.is-text { font-size: 17px; } }
 
-  /* 金額：スマホで数字と単位が別行に割れないよう、わずかに縮める */
-  @media (max-width: 768px) {
-    .price-amount { font-size: 22px; }
-    .price-amount span { font-size: 14px !important; }
-  }
+  /* 金額：数字と単位はそれぞれ意味のまとまりとして折り返す。
+     単位の途中や末尾1文字だけで割れないよう、単位を分割不可にする */
+  .price-amount span { white-space: nowrap; }
   /* 見出しの末尾1文字が孤立するのを避ける（対応ブラウザのみ） */
-  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 { text-wrap: pretty; }
+  .section-title, .hero-h1, .fv-catch, .price-label, .plan-card-header h3 {
+    text-wrap: pretty;
+    text-wrap: balance;
+  }
+
+  /* FAQ：他ページ（料金・産業医契約・スポット等）と同一の定義 */
+  .faq-list { display: grid; gap: 16px; }
+  .faq-item {
+    background: var(--gray-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .faq-q {
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .faq-q-mark {
+    width: 26px; height: 26px;
+    background: var(--teal);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .faq-a {
+    padding: 0 24px 20px 62px;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #444;
+  }
+  @media (max-width: 768px) {
+    .faq-a { padding-left: 24px; }
+  }
 </style>
 </head>
 <body>
@@ -555,7 +590,7 @@
     <h2 class="section-title">研修の料金</h2>
     <div class="price-card">
       <div class="price-label">管理職向けメンタルヘルス研修</div>
-      <div class="price-amount is-text">別途お見積もり <span>（内容・規模による）</span></div>
+      <div class="price-amount is-text">別途お見積り <span>（内容・規模による）</span></div>
       <div class="price-detail">
         <strong>対応形式：</strong>オンライン・訪問対応<br>
         <strong>対象：</strong>管理職・人事担当者
