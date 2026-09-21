@@ -440,6 +440,9 @@
   @media (max-width: 768px) { .btn-primary-lg { font-size: 15px; padding: 16px 24px; } }
   @media (max-width: 375px) { .btn-primary-lg { padding: 16px 16px; } }
 
+  /* ページ内リンクでの移動時、固定ヘッダー(72px)にカード見出しが隠れないようにする */
+  #fukushoku-package { scroll-margin-top: 88px; }
+
   /* 見出しの強制改行はPCでの改行位置指定。狭い画面では自然折返しに任せる */
   @media (max-width: 768px) {
     h1 br, h2 br, h3 br { display: none; }
