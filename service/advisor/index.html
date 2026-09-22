@@ -519,6 +519,15 @@
     .plan-price-row { padding: 18px 14px; }
     .plan-price-main { font-size: 18px; }
   }
+
+  /* 「継続して相談できることで、変わること」の4項目のみ。
+     要点を太字で1行目に置き、説明文を次行から同じ左端で表示する。
+     文言・文字サイズ・色は変更しない。 */
+  .benefit-list { gap: 28px; }            /* 項目同士の間隔（要点と説明の間より広く） */
+  .benefit-list li strong {
+    display: block;
+    margin-bottom: 6px;                    /* 要点と説明の間隔 */
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -670,7 +679,7 @@
   <div class="container">
     <span class="section-label">継続契約の意味</span>
     <h2 class="section-title">継続して相談できることで、変わること</h2>
-    <ul class="bullet-list">
+    <ul class="bullet-list benefit-list">
       <li><strong>案件になる前から相談できる。</strong>「面談を勧める段階か」「上司はどう接すればよいか」から相談できます。</li>
       <li><strong>経緯を踏まえて対応を考えられる。</strong>以前の配慮や職場とのやり取りも材料に、次の対応を検討します。</li>
       <li><strong>判断後も見直せる。</strong>復職時の配慮を決めた後、実際に働けているか確認し、業務量や配慮を調整します。</li>
