@@ -378,14 +378,6 @@
 
   /* ヒーローのボタンから移動したとき、固定ヘッダー(72px)に見出しが隠れないようにする */
   #form-section { scroll-margin-top: 88px; }
-
-  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
-  .section-title, .hero-h1, .fv-catch, .price-label,
-  .plan-card-header h3, .point-box-title {
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-  }
-
   /* ヒーロー説明文とボタンの間隔 */
   .hero-inner .btn-primary { margin-top: 20px; }
   /* ヒーローのボタン（他ページの .btn-primary と同一定義） */
@@ -448,7 +440,7 @@
 <!-- WHAT YOU GET -->
 <section id="whatyouget">
   <div class="container">
-    <h2 class="section-title">初回相談で<wbr>で<wbr>きること</h2>
+    <h2 class="section-title">初回相談でできること</h2>
     <ul class="bullet-list">
       <li>現在の課題の整理</li>
       <li>産業医契約が必要かどうかの確認</li>

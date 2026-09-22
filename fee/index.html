@@ -512,13 +512,6 @@
   }
   /* 目次から移動したとき、カード見出しが固定ヘッダーに隠れないようにする */
   .price-card[id] { scroll-margin-top: 88px; }
-
-  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
-  .section-title, .hero-h1, .fv-catch, .price-label,
-  .plan-card-header h3, .point-box-title {
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -605,7 +598,7 @@
   <section id="price">
     <div class="container">
       <span class="section-label">料金</span>
-      <h2 class="section-title">メドワーク産業医事務所の<wbr>料金</h2>
+      <h2 class="section-title">メドワーク産業医事務所の料金</h2>
       <nav class="price-toc" aria-label="料金項目">
         <a href="#price-shokutaku">嘱託産業医契約</a>
         <a href="#price-komon-small">顧問契約（50人未満）</a>
@@ -639,7 +632,7 @@
         <p class="price-note">面談が120分を超える場合は、30分ごとに33,000円（税込）を加算します。<br>想定より著しく複雑な場合は、事前にお見積りします。<br>主治医への照会状が必要な場合は、別途11,000円（税込）／1通がかかります。<br>復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、<a href="/service/advisor/">顧問契約</a>もご検討ください。<br>詳細は<a href="/fukushoku-mendan/">復職面談の流れ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-mental">
-        <div class="price-label">メンタルヘルス相談・<wbr>面談</div>
+        <div class="price-label">メンタルヘルス相談・面談</div>
         <div class="price-amount">55,000円 <span style="font-size:15px;">（税込）／1時間</span></div>
         <div class="price-detail">延長27,500円（税込）／30分</div>
       </div>
@@ -663,14 +656,14 @@
   <section id="types">
     <div class="container">
       <span class="section-label">選び方</span>
-      <h2 class="section-ti自社に<wbr>は<wbr>どの<wbr>形が<wbr>必要か形が必要か</h2>
+      <h2 class="section-title">自社にはどの形が必要か</h2>
       <div class="point-box"><p class="point-box-title">嘱託産業医契約</p>
         <strong>従業員50人以上の事業場は、労働安全衛生法により産業医の選任が義務です。</strong>月1回訪問などの継続契約で、選任義務がある場合や、休職・復職やメンタル不調の相談が継続的に発生する場合に向いています。→ <a href="/service/advisor/">産業医契約の詳細</a></div>
-      <div class="point-box"><p class="point-box-title">顧問契約（小規模事業場向け／<wbr>従業員50人未満）</p>
+      <div class="point-box"><p class="point-box-title">顧問契約（小規模事業場向け／従業員50人未満）</p>
         <strong>50人未満は選任義務がありません。</strong>ただし休職者への対応や復職の判断は、規模に関係なく発生します。継続して相談できる先を持ちたい場合の形です。月1回・60分までの面談・協議とメールでのご相談を継続的にご利用いただけます。契約期間は原則1年間（自動更新）です。労働安全衛生法上の産業医の選任には当たりません。→ <a href="/service/advisor/">顧問契約の詳細</a></div>
       <div class="point-box"><p class="point-box-title">顧問契約（メンタルヘルス支援追加）</p>
         すでに産業医がいる企業向けの形です。既存の産業医体制を維持したまま、メンタルヘルス分野の継続支援だけを追加できます。法定の選任を変更する必要はありません。→ <a href="/service/advisor/">顧問契約の詳細</a></div>
-      <div class="point-box"><p class="point-box-ti復職面談・<wbr>復職判断を<wbr>依頼したい方へしたい方へ</p>
+      <div class="point-box"><p class="point-box-title">復職面談・復職判断を依頼したい方へ</p>
         主治医の診断書が出た段階で、復職の可否や配慮事項について産業医の意見が必要な場合は、復職面談パッケージをご利用いただけます。すでに他社と産業医契約をしている企業からもご依頼いただけます。→ <a href="#fukushoku-package">復職面談パッケージの内容を見る</a></div>
       <div class="point-box"><p class="point-box-title">スポット面談</p>
         必要なときだけ単発で依頼する形です。すでに他社と産業医契約をしている場合でも、メンタル不調や復職の案件だけを依頼できます。→ <a href="/service/spot/">スポット面談の詳細</a></div>
@@ -682,7 +675,7 @@
   <section id="compare">
     <div class="container">
       <span class="section-label">比較</span>
-      <産業医の<wbr>契約形態・<wbr>料金比較tion-title">産業医の契約形態・料金比較</h2>
+      <h2 class="section-title">産業医の契約形態・料金比較</h2>
       <div class="compare-table-wrap">
         <table>
           <thead>
@@ -726,7 +719,8 @@
 
   <section id="factors">
     <div class="container">
-      <span class="section-label">費用の内訳</spa産業医の<wbr>料金が<wbr>決まる3つの<wbr>要因と、<wbr>見積り比較の<wbr>ポイント-title">産業医の料金が決まる3つの要因と、見積り比較のポイント</h2>
+      <span class="section-label">費用の内訳</span>
+      <h2 class="section-title">産業医の料金が決まる3つの要因と、見積り比較のポイント</h2>
       <ul class="check-list">
         <li>事業場の規模（従業員数）</li>
         <li>訪問頻度（月1回か、週1回か、オンラインか）</li>
@@ -738,7 +732,7 @@
 
   <section id="faq">
     <div class="container">
-      <span classよくある迷いと<wbr>考え方label">FAQ</span>
+      <span class="section-label">FAQ</span>
       <h2 class="section-title">よくある迷いと考え方</h2>
       <div class="faq-list">
         <div class="faq-item">
@@ -761,7 +755,8 @@
     </div>
   </section>
 
-  <section iまずは<wbr>無料で<wbr>ご相談くださいiv class="container">
+  <section id="cta">
+  <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
     <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
