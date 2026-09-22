@@ -676,6 +676,14 @@
     text-wrap: pretty;
     text-wrap: balance;
   }
+
+  /* ボタンのラベルは語やの矢印だけが次行に落ちないよう、狭い画面で左右を詰める */
+  @media (max-width: 400px) {
+    .btn-primary, .btn-outline, .btn-line { padding-left: 14px; padding-right: 14px; }
+  }
+
+  /* 末尾の語句が1文字だけ次行に落ちるのを防ぐための塊指定（該当箇所のみ） */
+  .nowrap-unit { white-space: nowrap; }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -819,7 +827,7 @@
         <span>製造・食品・IT 業種問わず対応</span>
       </div>
       <div class="fv-buttons">
-        <a href="/contact/" class="btn-primary">初回30分 無料相談を申し込む →</a>
+        <a href="/contact/" class="btn-primary">初回30分 無料相談を<span class="nowrap-unit">申し込む →</span></a>
         <a href="#service" class="btn-outline">サービスを見る →</a>
       </div>
     </div>
@@ -881,7 +889,7 @@
     <div class="guide-else">
       <h3>どれを選べばよいか分からない方・いずれにも当てはまらない方へ</h3>
       <p>ご相談内容が整理されていなくても構いません。現在の状況を伺い、必要な対応をご案内します。</p>
-      <a href="/contact/" class="btn-primary">初回30分 無料相談を申し込む →</a>
+      <a href="/contact/" class="btn-primary">初回30分 無料相談を<span class="nowrap-unit">申し込む →</span></a>
     </div>
   </div>
 </section>
@@ -989,7 +997,7 @@
           精神保健指定医／産業医<br>
           精神科臨床25年以上・年間500件超の産業医面談
         </div>
-        <a href="/profile/" class="btn-line">代表医師プロフィールを見る →</a>
+        <a href="/profile/" class="btn-line">代表医師プロフィールを<span class="nowrap-unit">見る →</span></a>
       </div>
     </div>
   </div>
@@ -1044,7 +1052,7 @@
   <div class="container">
     <h2 class="section-title">何を依頼すればよいか決まっていなくても構いません。</h2>
     <p class="cta-lead">現在の状況を伺い、必要な対応を整理します。まずは初回30分の無料相談をご利用ください。</p>
-    <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
+    <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を<span class="nowrap-unit">申し込む →</span></a>
   </div>
 </section>
 

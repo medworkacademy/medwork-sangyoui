@@ -512,6 +512,14 @@
   }
   /* 目次から移動したとき、カード見出しが固定ヘッダーに隠れないようにする */
   .price-card[id] { scroll-margin-top: 88px; }
+
+  /* ボタンの矢印が単独行に落ちないよう、狭い画面で左右を詰める */
+  @media (max-width: 400px) {
+    .btn-primary, .btn-outline, .btn-line { padding-left: 14px; padding-right: 14px; }
+  }
+
+  /* 末尾の語句が1文字だけ次行に落ちるのを防ぐための塊指定（該当箇所のみ） */
+  .nowrap-unit { white-space: nowrap; }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -591,7 +599,7 @@
       <div class="hero-tag">料金・契約形態</div>
       <h1 class="hero-h1">産業医の料金と<br>契約形態の選び方</h1>
       <p class="hero-lead">産業医の料金は「契約形態 × 事業場規模 × 対応範囲」で決まります。<br class="pc-br">まず料金をご覧いただき、そのあとで自社に必要な形の選び方を整理します。大阪府内・オンライン全国対応。</p>
-      <a class="btn-primary" href="/contact/">初回30分 無料相談を申し込む →</a>
+      <a class="btn-primary" href="/contact/">初回30分 無料相談を<span class="nowrap-unit">申し込む →</span></a>
     </div></div>
   </section>
 
@@ -663,7 +671,7 @@
         <strong>50人未満は選任義務がありません。</strong>ただし休職者への対応や復職の判断は、規模に関係なく発生します。継続して相談できる先を持ちたい場合の形です。月1回・60分までの面談・協議とメールでのご相談を継続的にご利用いただけます。契約期間は原則1年間（自動更新）です。労働安全衛生法上の産業医の選任には当たりません。→ <a href="/service/advisor/">顧問契約の詳細</a></div>
       <div class="point-box"><p class="point-box-title">顧問契約（メンタルヘルス支援追加）</p>
         すでに産業医がいる企業向けの形です。既存の産業医体制を維持したまま、メンタルヘルス分野の継続支援だけを追加できます。法定の選任を変更する必要はありません。→ <a href="/service/advisor/">顧問契約の詳細</a></div>
-      <div class="point-box"><p class="point-box-title">復職面談・復職判断を依頼したい方へ</p>
+      <div class="point-box"><p class="point-box-title">復職面談・<wbr>復職判断を<wbr><span class="nowrap-unit">依頼したい方へ</span></p>
         主治医の診断書が出た段階で、復職の可否や配慮事項について産業医の意見が必要な場合は、復職面談パッケージをご利用いただけます。すでに他社と産業医契約をしている企業からもご依頼いただけます。→ <a href="#fukushoku-package">復職面談パッケージの内容を見る</a></div>
       <div class="point-box"><p class="point-box-title">スポット面談</p>
         必要なときだけ単発で依頼する形です。すでに他社と産業医契約をしている場合でも、メンタル不調や復職の案件だけを依頼できます。→ <a href="/service/spot/">スポット面談の詳細</a></div>
@@ -759,7 +767,7 @@
   <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
-    <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
+    <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を<span class="nowrap-unit">申し込む →</span></a>
   </div>
 </section>
 
