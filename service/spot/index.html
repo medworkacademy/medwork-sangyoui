@@ -461,6 +461,32 @@
 
   /* 料金カード間の余白（料金ページと同じ24px） */
   .price-card + .price-card { margin-top: 24px; }
+
+  /* ヒーローのリンクから移動したとき、見出しが固定ヘッダーに隠れないようにする */
+  .price-card[id] { scroll-margin-top: 88px; }
+  /* ヒーローのボタンが2つ並ぶため折り返しを許可 */
+  /* ヒーロー内の副ボタン（トップページの .btn-outline と同一定義） */
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: all 0.2s;
+    display: inline-block;
+    letter-spacing: 0.03em;
+  }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+  .hero-inner .btn-primary, .hero-inner .btn-outline { margin-right: 12px; margin-bottom: 10px; }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 </head>
 <body>
@@ -500,6 +526,7 @@
       <h1 class="hero-h1">復職前面談・メンタル不調対応の<br>スポット産業医面談</h1>
       <p class="hero-lead">主治医の診断書が出た。そのまま復職させていいのだろうか？<br class="pc-br">産業医が、本人の健康状態と職場の実情を踏まえ、就業上の対応方針を整理します。<br class="pc-br">大阪府内・オンライン全国対応。</p>
       <a href="/contact/" class="btn-primary">休職・復職対応について相談する →</a>
+      <a href="#fukushoku-price" class="btn-outline">復職面談の料金・内容を見る →</a>
     </div>
   </div>
 </section>
@@ -508,7 +535,7 @@
 <section id="intro">
   <div class="container">
     <span class="section-label">こんな場面はありませんか？</span>
-    <h2 class="section-title">主治医・本人・職場の見方が分かれ、<br>対応方針の整理が必要になる場面</h2>
+    <h2 class="section-title">主治医・<wbr>本人・<wbr>職場の<wbr>見方が<wbr>分かれ、<br>対応方針の<wbr>整理が<wbr>必要に<wbr>なる場面</h2>
     <div class="intro-scene">
       主治医の診断書には「復職可能」と書かれている。<br>
       本人も「戻れます」と話している。<br>
@@ -522,8 +549,7 @@
 <!-- CASE LIST -->
 <section id="caselist">
   <div class="container">
-    <span class="section-label">こんな場合に</span>
-    <h2 class="section-title">このような場合にご相談ください</h2>
+    <span class="section-label">こんな場合に</sこの<wbr>ような場合に<wbr>ご相談くださいass="section-title">このような場合にご相談ください</h2>
     <ul class="check-list">
       <li>勤務継続・休職・復職について、産業医の意見を確認したい</li>
       <li>主治医の診断書だけで復職対応を進めてよいか不安がある</li>
@@ -538,7 +564,7 @@
 <!-- WHAT WE DO -->
 <section id="whatwedo">
   <div class="container">
-    <span class="section-label">対応内容</span>
+    <span class="section-labeスポット面談で<wbr>対応で<wbr>きる内容
     <h2 class="section-title">スポット面談で対応できる内容</h2>
     <ul class="bullet-list">
       <li>休職者の復職前面談、メンタル不調者への就業上の評価</li>
@@ -554,11 +580,10 @@
 <!-- POINT -->
 <section id="point">
   <div class="container">
-    <span class="section-label">精神科医×産業医の視点</span>
-    <h2 class="section-title">産業医が見る復職判断のポイント<br>― 精神科臨床の視点から</h2>
+    <span class="section-l産業医が<wbr>見る復職判断の<wbr>ポイント<br>― 精神科臨床の<wbr>視点から2 class="section-title">産業医が見る復職判断のポイント<br>― 精神科臨床の視点から</h2>
     <p class="point-lead">復職に関する意見では、症状が軽くなっているかだけでは不十分です。</p>
     <div class="point-box">
-      <p class="point-box-title">重要なのは、以下を総合的に見ることです</p>
+      <p class="point-box-title">重要なの<wbr>は、<wbr>以下を<wbr>総合的に<wbr>見ること<wbr>で<wbr>す</p>
       <ul class="bullet-list">
         <li>生活リズムが整っているか</li>
         <li>業務に必要な集中力や持続力が戻っているか</li>
@@ -574,9 +599,9 @@
 <!-- PRICE -->
 <section id="price">
   <div class="container">
-    <span class="section-label">料金</span>
+  スポット面談の<wbr>料金lass="section-label">料金</span>
     <h2 class="section-title">スポット面談の料金</h2>
-    <div class="price-card">
+    <div class="price-card" id="fukushoku-price">
       <div class="price-label">復職面談パッケージ</div>
       <div class="price-amount">132,000円 <span style="font-size:15px;">（税込）／120分まで</span></div>
       <div class="price-detail">
@@ -590,7 +615,7 @@
       </div>
     </div>
     <div class="price-card">
-      <div class="price-label">その他のスポット面談</div>
+      <div class="price-label">その<wbr>他の<wbr>スポット面談</div>
       <div class="price-amount">22,000円 <span style="font-size:15px;">（税込）／30分〜</span></div>
       <div class="price-detail">
         <strong style="display:block;color:var(--navy);font-size:16px;margin-bottom:4px;">■ メンタルヘルス相談・面談　55,000円（税込）／1時間</strong>
@@ -631,7 +656,7 @@
 </section>
 
 <!-- CTA -->
-<section id="cta">
+まずは<wbr>無料で<wbr>ご相談くださいcta">
   <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>

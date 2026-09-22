@@ -451,6 +451,13 @@
     text-wrap: pretty;
     text-wrap: balance;
   }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -529,20 +536,20 @@
   <section id="steps">
     <div class="container">
       <span class="section-label">全体の流れ</span>
-      <h2 class="section-title">復職までの6ステップ</h2>
-      <div class="point-box"><p class="point-box-title">STEP 1｜主治医の「復職可能」診断書の提出</p>本人が主治医から診断書を受け取り、会社に復職を申し出ます。</div>
-      <div class="point-box"><p class="point-box-title">STEP 2｜会社での受付・情報整理</p>休職前の業務内容、休職期間、勤怠の記録、職場の受け入れ状況を整理します。</div>
-      <div class="point-box"><p class="point-box-title">STEP 3｜産業医による復職前面談</p>本人と産業医が面談し、職場で就業できる状態かを確認します（確認内容は下記）。</div>
-      <div class="point-box"><p class="point-box-title">STEP 4｜産業医の意見</p>面談を踏まえ、復職の可否と、就業制限・業務上の配慮について産業医が意見を出します（意見書として書面化する場合もあります）。</div>
-      <div class="point-box"><p class="point-box-title">STEP 5｜会社としての復職判定</p>産業医の意見を踏まえ、最終的な復職の決定は会社が行います。復職日、就業制限（残業・出張の制限など）、配慮事項を決めます。</div>
-      <div class="point-box"><p class="point-box-title">STEP 6｜復職後のフォローアップ</p>復職直後は再不調のリスクが高い時期です。定期的な面談や段階的な業務負荷の調整で経過を確認します。</div>
+      <h2 class="section-title">復職まで<wbr>の6ステップ</h2>
+      <div class="point-box"><p class="point-box-title">STEP 1｜主治医の「復職可能」診断書の<wbr>提出</p>本人が主治医から診断書を受け取り、会社に復職を申し出ます。</div>
+      <div class="point-box"><p class="point-box-tiSTEP 2｜会社で<wbr>の<wbr>受付・<wbr>情報整理・情報整理</p>休職前の業務内容、休職期間、勤怠の記録、職場の受け入れ状況を整理します。</div>
+      <div class="point-box"><p clasSTEP 3｜産業医に<wbr>よる復職前面談">STEP 3｜産業医による復職前面談</p>本人と産業医が面談し、職場で就業できる状態かを確認します（確認内容は下記）。</div>
+      <div class="point-box"><pSTEP 4｜産業医の<wbr>意見-box-title">STEP 4｜産業医の意見</p>面談を踏まえ、復職の可否と、就業制限・業務上の配慮について産業医が意見を出します（意見書として書面化する場合もあります）。</div>
+      <div class="point-boSTEP 5｜会社と<wbr>しての<wbr>復職判定t-box-title">STEP 5｜会社としての復職判定</p>産業医の意見を踏まえ、最終的な復職の決定は会社が行います。復職日、就業制限（残業・出張の制限など）、配慮事項を決めます。</div>
+      <div classSTEP 6｜復職後の<wbr>フォローアップass="point-box-title">STEP 6｜復職後のフォローアップ</p>復職直後は再不調のリスクが高い時期です。定期的な面談や段階的な業務負荷の調整で経過を確認します。</div>
     </div>
   </section>
 
   <section id="checks">
     <div class="container">
       <span class="section-label">面談で確認すること</span>
-      <h2 class="section-title">復職前面談で産業医が確認すること</h2>
+      <h2 class="section-ti復職前面談で<wbr>産業医が<wbr>確認すること認すること</h2>
       <ul class="check-list">
         <li>生活リズムが整っているか（起床・睡眠・日中の活動）</li>
         <li>症状が安定し、通院・治療が継続できているか</li>
@@ -558,15 +565,14 @@
   <section id="difference">
     <div class="container">
       <span class="section-label">役割の違い</span>
-      <h2 class="section-title">主治医の診断書と産業医の意見はどう違うのか</h2>
+      <h2 class="主治医の<wbr>診断書と<wbr>産業医の<wbr>意見は<wbr>どう違うの<wbr>か書と産業医の意見はどう違うのか</h2>
       <div class="intro-scene">主治医は治療と回復を支える立場であり、産業医は、職場で安全に就業できるか、どのような配慮が必要かを確認する立場です。<br>両者の意見が異なることは実際にあります。<br><br>主治医の医学的情報を尊重したうえで、業務内容・職場環境・受け入れ体制を踏まえて就業上の意見を整理するのが、産業医の役割です。</div>
     </div>
   </section>
 
   <section id="prepare">
     <div class="container">
-      <span class="section-label">人事の準備</span>
-      <h2 class="section-title">面談前に準備しておくとよいもの</h2>
+      <span class="section-label">人事の準備面談前に<wbr>準備しておくと<wbr>よいも<wbr>のh2 class="section-title">面談前に準備しておくとよいもの</h2>
       <ul class="bullet-list">
         <li>休職前の業務内容と勤務状況（勤怠記録）</li>
         <li>休職の経緯（分かる範囲で）</li>
@@ -598,7 +604,7 @@
   </section>
 
   <section id="cta">
-  <div class="container">
+ まずは<wbr>無料で<wbr>ご相談くださいcontainer">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
     <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>

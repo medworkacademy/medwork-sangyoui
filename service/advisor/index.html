@@ -505,6 +505,27 @@
 
   /* ページ内リンクでの移動時、固定ヘッダー(72px)に見出しが隠れないようにする */
   .plan-card[id] { scroll-margin-top: 88px; }
+
+  /* 顧問カード：月額を独立した行にし、説明を段落で分ける */
+  .plan-price-main {
+    font-size: 20px; font-weight: 800; color: var(--navy);
+    line-height: 1.5; margin: 0 0 12px;
+  }
+  .plan-price-item p { margin: 0 0 12px; }
+  .plan-price-item p:last-child { margin-bottom: 0; }
+  /* スマホで本文が細くなりすぎないよう左右の余白を詰める */
+  @media (max-width: 768px) {
+    .plan-card-body { padding: 22px 16px; }
+    .plan-price-row { padding: 18px 14px; }
+    .plan-price-main { font-size: 18px; }
+  }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -655,7 +676,7 @@
 <section id="benefits">
   <div class="container">
     <span class="section-label">継続契約の意味</span>
-    <h2 class="section-title">継続して相談できることで、変わること</h2>
+    <h2 class="section-title">継続して相談で<wbr>きること<wbr>で、<wbr>変わること</h2>
     <ul class="bullet-list">
       <li><strong>案件になる前から相談できる。</strong>「面談を勧める段階か」「上司はどう接すればよいか」から相談できます。</li>
       <li><strong>経緯を踏まえて対応を考えられる。</strong>以前の配慮や職場とのやり取りも材料に、次の対応を検討します。</li>
@@ -669,15 +690,15 @@
 <section id="branch">
   <div class="container">
     <span class="section-label">契約の選び方</span>
-    <h2 class="section-title">事業場の規模と現在の産業医体制で、契約の形が変わります</h2>
+    <h2 class="事業場の<wbr>規模と<wbr>現在の<wbr>産業医体制で、<wbr>契約の<wbr>形が<wbr>変わります医体制で、契約の形が変わります</h2>
 
-    <div class="point-box"><p class="point-box-title">産業医の新規選任・変更を検討している</p>
+    <div class="point-box"><p class="point-box-title">産業医の<wbr>新規選任・<wbr>変更を<wbr>検討している</p>
       産業医の選任が必要な段階です。新たに選任する場合だけでなく、既存の産業医からの変更を検討している場合も対応します。休職・復職の案件が続いており、その都度対応する形では追いつかなくなっている企業にも向いています。まずは嘱託産業医契約からご検討ください。→ <a href="#plans">契約プランと料金の目安へ</a></div>
 
-    <div class="point-box"><p class="point-box-title">すでに産業医がいて、メンタルヘルス対応を強化したい</p>
+    <div class="point-box"><p class="poすで<wbr>に<wbr>産業医が<wbr>いて、<wbr>メンタルヘルス対応を<wbr>強化したいメンタルヘルス対応を強化したい</p>
       既存の産業医体制はそのままに、メンタルヘルス分野だけを追加でご契約いただけます。現在の産業医にメンタルヘルス分野の相談がしづらい、既存の産業保健体制に専門性を追加したい企業に向いています。法定の選任を変更する必要はありません。→ <a href="#plan-mental">顧問契約（メンタルヘルス支援追加）へ</a></div>
 
-    <div class="point-box"><p class="point-box-title">従業員50人未満で、継続して相談したい</p>
+    <div class従業員50人未満で、<wbr>継続して相談したいss="point-box-title">従業員50人未満で、継続して相談したい</p>
       産業医の選任義務はありませんが、休職・復職の対応や健診後の対応は、規模に関係なく発生します。ストレスチェックの結果を実務に反映できていない、管理職からの相談に人事だけで対応しきれない、といった企業にも向いています。→ <a href="#plan-small">顧問契約（小規模事業場向け）へ</a></div>
 
     <p style="margin-top:20px;">どのケースか分からない場合は<a href="/contact/">無料相談</a>へ。選任期限・事業場単位の数え方などの詳細は<a href="#faq">FAQ</a>をご覧ください。</p>
@@ -688,22 +709,20 @@
 <!-- WHAT WE DO -->
 <section id="whatwedo">
   <div class="container">
-    <span class="section-label">対応内容</span>
+    <span class="section-labe産業医契約で<wbr>対応で<wbr>きる内容>
     <h2 class="section-title">産業医契約で対応できる内容</h2>
     <p class="point-lead">産業医が行う業務は、法令に基づくものと、企業の状況に応じて行うメンタルヘルス対応に分かれます。<br>以下は当事務所の対応業務です。実際の担当範囲は、契約形態と既存の産業医体制に応じて決めます。</p>
 
-    <div class="point-box"><p class="point-box-title">健康診断後の就業判定・事後措置</p>
-      健診結果と仕事内容を確認し、通常勤務が可能か、就業制限や休業が必要かを整理します。必要な業務配慮について会社に助言します。</div>
-    <div class="point-box"><p class="point-box-title">長時間労働者・高ストレス者への面接指導</p>
-      時間外労働が続いている社員や、ストレスチェックで面接指導が必要と判定された社員と面談し、心身の状態を確認したうえで、就業上の配慮が必要かどうかを整理します。</div>
-    <div class="point-box"><p class="point-box-title">休職・復職に関する面談</p>
+    <div 健康診断後の<wbr>就業判定・<wbr>事後措置x"><p class="point-box-title">健康診断後の就業判定・事後措置</p>
+      健診結果と仕事内容を確認し、通常勤務が可能か、就業制限や休業が必要かを整理します。必要な業務配慮について会社に助言します。</div>長時間労働者・<wbr>高ストレス者への<wbr>面接指導int-box"><p class="point-box-title">長時間労働者・高ストレス者への面接指導</p>
+      時間外労働が続いている社員や、ストレスチェックで面接指導が必要と判定された社員と面談し、心身の状態を確認したうえで、就業上の配慮が必要かどうかを整理休職・<wbr>復職に<wbr>関する面談    <div class="point-box"><p class="point-box-title">休職・復職に関する面談</p>
       本人・職場双方の状況を踏まえ、就業制限や業務配慮について助言します。</div>
     <div class="point-box"><p class="point-box-title">職場巡視</p>
       毎月、職場を巡視し、作業環境や安全衛生上の課題を確認します。</div>
     <div class="point-box"><p class="point-box-title">衛生委員会</p>
-      毎月の衛生委員会に出席し、産業保健の観点から助言します。管理職・人事担当者からの相談にも応じます。</div>
+      毎月の衛生委員会に出席し、産業保健の観点から助言します。管理職・人事担ストレスチェック後の<wbr>職場改善支援div>
     <div class="point-box"><p class="point-box-title">ストレスチェック後の職場改善支援</p>
-      結果を踏まえ、部署やチーム単位で見えてきた傾向を共有し、職場改善につなげます。</div>
+      結果を踏まえ、部署やチーム単位で見えてき衛生教育・<wbr>健康教育、<wbr>体制づくりげます。</div>
     <div class="point-box"><p class="point-box-title">衛生教育・健康教育、体制づくり</p>
       健康障害が発生した場合の原因調査・再発防止のための措置、メンタルヘルス対応に関する社内体制づくりにも対応します。</div>
   </div>
@@ -711,8 +730,7 @@
 
 <section id="visit">
   <div class="container">
-    <span class="section-label">訪問の内訳</span>
-    <h2 class="section-title">月々の訪問と、訪問日以外の相談（嘱託産業医契約の場合）</h2>
+    <span class="sec月々の訪問と、<wbr>訪問日以外の<wbr>相談（嘱託産業医契約の<wbr>場合）  <h2 class="section-title">月々の訪問と、訪問日以外の相談（嘱託産業医契約の場合）</h2>
     <p class="point-lead">標準的な訪問（2時間目安）の内訳：</p>
     <div class="visit-table-wrap">
       <table>
@@ -733,7 +751,7 @@
 <!-- STAGES -->
 <section id="stages">
   <div class="container">
-    <span class="section-label">継続対応</span>
+    不調の<wbr>兆候から<wbr>復職後まで、<wbr>継続して支える-label">継続対応</span>
     <h2 class="section-title">不調の兆候から復職後まで、継続して支える</h2>
     <div class="stage-list">
       <div class="stage-item"><div class="stage-num">1</div><div class="stage-body">
@@ -786,14 +804,16 @@
 
       <div class="plan-card" id="plan-small">
         <div class="plan-card-header">
-          <h3>顧問契約（小規模事業場向け／従業員50人未満）</h3>
+          <h3>顧問契約（小規模事業場向け／<wbr>従業員50人未満）</h3>
           <p>対象：産業医選任義務はないが、メンタルヘルス対応の専門家を持ちたい企業</p>
         </div>
         <div class="plan-card-body">
           <div class="plan-price-row">
             <div class="plan-price-label">料金</div>
             <div class="plan-price-item">
-              55,000円（税込）〜／月。月1回・60分までの従業員面談・人事担当者との協議、メールでの相談・経過共有を含みます。時間延長・別日の追加対応は別途料金です。産業医意見書・主治医への照会状の作成を含みます。ストレスチェックの実施者を代表医師が担います（受検システム・実施事務の外部委託費は別途）。労働安全衛生法上の産業医の選任には当たりません。
+              <p class="plan-price-main">55,000円（税込）〜／月</p>
+              <p>月1回・60分までの従業員面談・人事担当者との協議、メールでの相談・経過共有を含みます。時間延長・別日の追加対応は別途料金です。</p>
+              <p>産業医意見書・主治医への照会状の作成を含みます。ストレスチェックの実施者を代表医師が担います（受検システム・実施事務の外部委託費は別途）。労働安全衛生法上の産業医の選任には当たりません。</p>
             </div>
           </div>
         </div>
@@ -801,15 +821,16 @@
 
       <div class="plan-card" id="plan-mental">
         <div class="plan-card-header">
-          <h3>顧問契約（メンタルヘルス支援追加／既存産業医体制がある企業向け）</h3>
+         顧問契約（メンタルヘルス支援追加／<wbr>既存産業医体制が<wbr>ある企業向け）企業向け）</h3>
           <p>対象：すでに産業医がいて、メンタルヘルス分野の継続支援を追加したい企業</p>
         </div>
         <div class="plan-card-body">
           <div class="plan-price-row">
             <div class="plan-price-label">料金</div>
             <div class="plan-price-item">
-              月額は個別にご案内します。月1回・60分までの従業員面談・人事担当者との協議、メールでの相談・経過共有を含みます。既存産業医との役割分担を整理して対応します。<br>
-              週1回訪問でのご契約実績もあります。規模は問いません。訪問頻度を増やした契約をご希望の場合は、頻度に応じて個別にご案内します。
+              <p class="plan-price-main">月額は個別にご案内します</p>
+              <p>月1回・60分までの従業員面談・人事担当者との協議、メールでの相談・経過共有を含みます。既存産業医との役割分担を整理して対応します。</p>
+              <p>週1回訪問でのご契約実績もあります。規模は問いません。訪問頻度を増やした契約をご希望の場合は、頻度に応じて個別にご案内します。</p>
             </div>
           </div>
         </div>
@@ -916,8 +937,7 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section id="cta">
+<!-まずは<wbr>無料で<wbr>ご相談くださいction id="cta">
   <div class="container">
     <h2 class="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>

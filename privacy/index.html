@@ -119,6 +119,13 @@
     text-wrap: pretty;
     text-wrap: balance;
   }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 </head>
 <body>

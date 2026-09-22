@@ -417,6 +417,13 @@
     text-wrap: pretty;
     text-wrap: balance;
   }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -558,7 +565,7 @@
 <section id="message">
   <div class="container">
     <span class="section-label">代表メッセージ</span>
-    <h2 class="section-title">メンタル対応を、<br>一人で抱え込まないために</h2>
+    <h2 class="section-title">メンタル対応を、<br>一人で<wbr>抱え込まないため<wbr>に</h2>
     <div class="message-block">
       <p>精神科と産業医の両方の現場を見てきた中で、強く感じていることがあります。</p>
       <p>メンタル対応で判断を迫られるとき、人事担当者が情報整理や関係者間の調整を一人で抱え込みやすい場面を何度も見てきました。</p>
@@ -572,7 +579,7 @@
 <section id="values">
   <div class="container">
     <span class="section-label">大切にしていること</span>
-    <h2 class="section-title">不調者への適切な配慮と、<br>職場全体の安全性・公平性のバランスを保つこと</h2>
+    <h2 class="secti不調者への<wbr>適切な配慮と、<br>職場全体の<wbr>安全性・<wbr>公平性の<wbr>バランスを<wbr>保つことのバランスを保つこと</h2>
     <div class="values-text">
       <div class="values-highlight">
         不調者への適切な配慮と、職場全体の安全性・公平性のバランスを保つこと。
@@ -599,8 +606,7 @@
 
 <!-- CTA -->
 <section id="cta">
-  <div class="container">
-    <h2 class="section-title">まずは無料でご相談ください</h2>
+  <div class="containまずは<wbr>無料で<wbr>ご相談くださいclass="section-title">まずは無料でご相談ください</h2>
     <p class="cta-lead">初回30分・無料でご相談をお受けしています。</p>
     <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
   </div>

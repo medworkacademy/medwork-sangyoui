@@ -676,6 +676,13 @@
     text-wrap: pretty;
     text-wrap: balance;
   }
+
+  /* 見出しは語の途中で折らず、意味の区切り（読点・中黒・／・<wbr>）で改行する */
+  .section-title, .hero-h1, .fv-catch, .price-label,
+  .plan-card-header h3, .point-box-title {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -829,7 +836,7 @@
 <!-- PAIN（旧pain＋旧scenesを統合） -->
 <section id="pain">
   <div class="container">
-    <h2 class="section-title">こんな場面で、判断に迷っていませんか？</h2>
+    <h2 class="section-title">こんな場面で、<wbr>判断に<wbr>迷っていませんか？</h2>
     <div class="pain-grid">
       <div class="pain-card">
         <h3>主治医から「復職可」。でも、このまま復職させてよいか判断に迷う。</h3>
@@ -855,7 +862,7 @@
 <section id="quicknav">
   <div class="container">
     <span class="section-label">Quick Guide</span>
-    <h2 class="section-title">ご相談に合わせた対応をご案内します</h2>
+    <h2 class="sectiご相談に<wbr>合わせた対応を<wbr>ご案内しますた対応をご案内します</h2>
     <div class="guide-grid">
       <div class="guide-card">
         <h3>今ある案件・従業員対応について相談したい</h3>
@@ -890,7 +897,7 @@
 <section id="strength">
   <div class="container">
     <span class="section-label">Why Us</span>
-    <h2 class="section-title">メドワークの3つの強み</h2>
+    <h2 clメドワークの3つの<wbr>強みn-title">メドワークの3つの強み</h2>
     <div class="strength-cards">
       <div class="strength-card">
         <div class="strength-card-header">
@@ -927,7 +934,7 @@
 <section id="cases">
   <div class="container">
     <span class="section-label">Cases</span>
-    <h2 class="section-title">業種・企業規模別契約事例</h2>
+    <業種・<wbr>企業規模別契約事例ction-title">業種・企業規模別契約事例</h2>
     <div class="cases-table-wrap">
       <table>
         <thead>
@@ -998,7 +1005,7 @@
 <!-- FEE NAV -->
 <section id="feenav">
   <div class="container">
-    <h2 class="section-title">料金・契約について</h2>
+料金・<wbr>契約に<wbr>ついてlass="section-title">料金・契約について</h2>
     <div class="fee-box">
       <p>産業医契約、スポット相談、研修・講話など、サービスごとの料金をご案内しています。</p>
       <a href="/fee/" class="btn-line">料金・サービス内容を見る →</a>
@@ -1041,8 +1048,7 @@
 
 <!-- CTA -->
 <section id="cta">
-  <div class="container">
-    <h2 class="section-title">何を依頼すればよいか決まっていなくても構いません。</h2>
+  <div class="co何を<wbr>依頼すればよいか決まっていなくても<wbr>構いません。section-title">何を依頼すればよいか決まっていなくても構いません。</h2>
     <p class="cta-lead">現在の状況を伺い、必要な対応を整理します。まずは初回30分の無料相談をご利用ください。</p>
     <a href="/contact/" class="btn-primary btn-primary-lg">初回30分 無料相談を申し込む →</a>
   </div>
