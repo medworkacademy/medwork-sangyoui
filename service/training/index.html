@@ -447,6 +447,13 @@
     .btn-primary, .btn-outline, .btn-line { padding-left: 14px; padding-right: 14px; }
   }
   .nowrap-unit { white-space: nowrap; }
+
+  /* メールアドレスは1要素のまま1行に固定 */
+  .mail-nowrap { white-space: nowrap; }
+  /* 300px未満（想定外の極端な狭幅）では、はみ出しを避けて従来どおり折り返す */
+  @media (max-width: 299px) {
+    .mail-nowrap, .nowrap-unit { white-space: normal; }
+  }
 </style>
 </head>
 <body>
@@ -639,7 +646,7 @@
     <div>
       <div class="footer-col-title">お問い合わせ</div>
       <div style="font-size:13px; line-height:1.9;">
-        E-mail：<a href="mailto:contact@medwork-sangyoui.jp">contact@medwork-sangyoui.jp</a><br>
+        E-mail：<a href="mailto:contact@medwork-sangyoui.jp" class="mail-nowrap">contact@medwork-sangyoui.jp</a><br>
         初回30分 無料相談受付中
       </div>
     </div>
