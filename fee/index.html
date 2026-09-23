@@ -520,6 +520,11 @@
 
   /* 末尾の語句が1文字だけ次行に落ちるのを防ぐための塊指定（該当箇所のみ） */
   .nowrap-unit { white-space: nowrap; }
+
+  /* 320px幅で金額と単位が分断されないよう、カードの左右余白を詰める */
+  @media (max-width: 360px) {
+    .price-card { padding-left: 16px; padding-right: 16px; }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -618,38 +623,38 @@
       </nav>
       <div class="price-card" id="price-shokutaku">
         <div class="price-label">嘱託産業医契約</div>
-        <div class="price-amount">88,000円 <span style="font-size:15px;">（税込）〜／月</span></div>
-        <div class="price-detail">標準2時間：88,000円（税込）〜／月<br>（目安：従業員50〜99人）<br>標準3時間：110,000円（税込）〜／月<br>（目安：従業員100〜200人）<br>200人を超える場合：別途お見積り<br>ストレスチェックの実施者：代表医師が務めます<br>訪問時間の延長・別日の追加面談：16,500円（税込）／30分<br>訪問時交通費：別途実費</div>
+        <div class="price-amount"><span class="nowrap-unit">88,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）〜／月</span></div>
+        <div class="price-detail">標準2時間：<span class="nowrap-unit">88,000円（税込）〜／月</span><br>（目安：従業員50〜99人）<br>標準3時間：<span class="nowrap-unit">110,000円（税込）〜／月</span><br>（目安：従業員100〜200人）<br>200人を超える場合：別途お見積り<br>ストレスチェックの実施者：代表医師が務めます<br>訪問時間の延長・別日の追加面談：<span class="nowrap-unit">16,500円（税込）／30分</span><br>訪問時交通費：別途実費</div>
         <p class="price-note">詳細は<a href="/service/advisor/">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-komon-small">
-        <div class="price-label">顧問契約<wbr>（小規模事業場向け／<wbr>従業員50人未満）</div>
-        <div class="price-amount">55,000円 <span style="font-size:15px;">（税込）〜／月</span></div>
-        <div class="price-detail">月1回・60分までの従業員面談・人事担当者との協議を含みます<br>メールでの相談・経過共有も月額料金に含まれます<br>時間延長・別日の追加対応は別途料金となります（16,500円（税込）／30分）<br>産業医意見書・主治医への照会状の作成：含みます<br>ストレスチェックの実施者を代表医師が担います<br>（受検システム・実施事務の外部委託費は別途）<br>訪問をご希望の場合は交通費を含めて別途お見積り<br>契約期間：原則1年間（自動更新）</div>
+        <div class="price-label">顧問契約<wbr><span class="nowrap-unit">（小規模事業場向け／</span><wbr>従業員50人未満）</div>
+        <div class="price-amount"><span class="nowrap-unit">55,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）〜／月</span></div>
+        <div class="price-detail">月1回・60分までの従業員面談・人事担当者との協議を含みます<br>メールでの相談・経過共有も月額料金に含まれます<br>時間延長・別日の追加対応は別途料金となります（<span class="nowrap-unit">16,500円（税込）／30分</span>）<br>産業医意見書・主治医への照会状の作成：含みます<br>ストレスチェックの実施者を代表医師が担います<br>（受検システム・実施事務の外部委託費は別途）<br>訪問をご希望の場合は交通費を含めて別途お見積り<br>契約期間：原則1年間（自動更新）</div>
         <p class="price-note">顧問契約は労働安全衛生法上の産業医の選任には当たりません。契約期間中に常時使用する労働者が50人以上となった場合は、法令上の産業医選任が必要となるため、嘱託産業医契約への切り替えとなります。詳細は<a href="/service/advisor/">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-komon-mental">
-        <div class="price-label">顧問契約<wbr>（メンタルヘルス支援追加／<wbr>既存産業医体制が<wbr>ある企業向け）</div>
+        <div class="price-label">顧問契約<wbr><span class="nowrap-unit">（メンタルヘルス支援追加／</span><wbr>既存産業医体制が<wbr>ある企業向け）</div>
         <div class="price-detail">既存の産業医体制を維持したまま、メンタルヘルス分野の継続支援だけを追加したい企業向けです。<br>週1回訪問でのご契約実績もあります。規模は問いません。訪問頻度を増やした契約をご希望の場合は、頻度に応じて個別にご案内します。<br>月1回・60分までの従業員面談・人事担当者との協議を含みます<br>メールでの相談・経過共有も月額料金に含まれます<br>時間延長・別日の追加対応は別途料金となります<br>既存産業医との役割分担を整理して対応します<br>ストレスチェックへの関与は、既存の実施体制に合わせて調整します</div>
         <p class="price-note">料金は個別にご案内します。詳細は<a href="/service/advisor/">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="fukushoku-package">
         <div class="price-label">復職面談パッケージ</div>
-        <div class="price-amount">132,000円 <span style="font-size:15px;">（税込）／120分まで</span></div>
+        <div class="price-amount"><span class="nowrap-unit">132,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）／120分まで</span></div>
         <div class="price-detail">事前情報の確認・面談・産業医意見書の作成までを一式で対応します。</div>
-        <p class="price-note">面談が120分を超える場合は、30分ごとに33,000円（税込）を加算します。<br>想定より著しく複雑な場合は、事前にお見積りします。<br>主治医への照会状が必要な場合は、別途11,000円（税込）／1通がかかります。<br>復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、<a href="/service/advisor/">顧問契約</a>もご検討ください。<br>詳細は<a href="/fukushoku-mendan/">復職面談の流れ</a>をご覧ください。</p>
+        <p class="price-note">面談が120分を超える場合は、30分ごとに<span class="nowrap-unit">33,000円（税込）</span>を加算します。<br>想定より著しく複雑な場合は、事前にお見積りします。<br>主治医への照会状が必要な場合は、別途<span class="nowrap-unit">11,000円（税込）／1通</span>がかかります。<br>復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、<a href="/service/advisor/">顧問契約</a>もご検討ください。<br>詳細は<a href="/fukushoku-mendan/">復職面談の流れ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-mental">
         <div class="price-label">メンタルヘルス相談・面談</div>
-        <div class="price-amount">55,000円 <span style="font-size:15px;">（税込）／1時間</span></div>
-        <div class="price-detail">延長27,500円（税込）／30分</div>
+        <div class="price-amount"><span class="nowrap-unit">55,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）／1時間</span></div>
+        <div class="price-detail">延長<span class="nowrap-unit">27,500円（税込）／30分</span></div>
       </div>
       <div class="price-card" id="price-hotei">
         <div class="price-label">法定面談</div>
-        <div class="price-amount">22,000円 <span style="font-size:15px;">（税込）／30分</span></div>
+        <div class="price-amount"><span class="nowrap-unit">22,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）／30分</span></div>
         <div class="price-detail">長時間労働者面接指導・高ストレス者面接指導・健康診断事後面談に対応します。</div>
       </div>
-      <p class="price-shared-note">メンタルヘルス相談・面談／法定面談 共通<br>主治医への照会状が必要な場合は、いずれの面談でも別途11,000円（税込）／1通がかかります。<br>訪問対応の場合は、別途交通費を申し受けます。<br>詳細は<a href="/service/spot/">スポット面談のページ</a>をご覧ください。</p>
+      <p class="price-shared-note">メンタルヘルス相談・面談／法定面談 共通<br>主治医への照会状が必要な場合は、いずれの面談でも別途<span class="nowrap-unit">11,000円（税込）／1通</span>がかかります。<br>訪問対応の場合は、別途交通費を申し受けます。<br>詳細は<a href="/service/spot/">スポット面談のページ</a>をご覧ください。</p>
       <div class="price-card" id="price-kenshu">
         <div class="price-label">管理職向けメンタルヘルス研修</div>
         <div class="price-amount is-text">別途お見積り</div>
@@ -709,9 +714,9 @@
             </tr>
             <tr>
               <th scope="row">料金目安</th>
-              <td>88,000円／月〜（2時間）<br>110,000円／月〜（3時間）</td>
-              <td>小規模事業場向け：55,000円／月〜<br>メンタルヘルス支援追加：個別にご案内します</td>
-              <td>132,000円／件<br>（復職面談パッケージ）<br>55,000円／60分<br>（メンタルヘルス相談）<br>22,000円／30分<br>（法定面談）</td>
+              <td><span class="nowrap-unit">88,000円／月〜</span>（2時間）<br><span class="nowrap-unit">110,000円／月〜</span>（3時間）</td>
+              <td>小規模事業場向け：<span class="nowrap-unit">55,000円／月〜</span><br>メンタルヘルス支援追加：個別にご案内します</td>
+              <td><span class="nowrap-unit">132,000円／件</span><br>（復職面談パッケージ）<br><span class="nowrap-unit">55,000円／60分</span><br>（メンタルヘルス相談）<br><span class="nowrap-unit">22,000円／30分</span><br>（法定面談）</td>
             </tr>
             <tr>
               <th scope="row">向いている場合</th>
@@ -749,7 +754,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q"><span class="faq-q-mark">Q</span>スポットと顧問契約は、どちらが安いですか？</div>
-          <div class="faq-a">案件が単発ならスポット、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（55,000円／月）には月1回・60分までの面談・協議とメールでのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、スポットから始めて状況を見る方法もあります。</div>
+          <div class="faq-a">案件が単発ならスポット、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（<span class="nowrap-unit">55,000円／月</span>）には月1回・60分までの面談・協議とメールでのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、スポットから始めて状況を見る方法もあります。</div>
         </div>
         <div class="faq-item">
           <div class="faq-q"><span class="faq-q-mark">Q</span>すでに産業医がいますが、メンタルヘルス分野だけ追加で依頼できますか？</div>

@@ -487,6 +487,11 @@
 
   /* 末尾の語句が1文字だけ次行に落ちるのを防ぐための塊指定（該当箇所のみ） */
   .nowrap-unit { white-space: nowrap; }
+
+  /* 320px幅で金額と単位が分断されないよう、カードの左右余白を詰める */
+  @media (max-width: 360px) {
+    .price-card { padding-left: 16px; padding-right: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -605,29 +610,29 @@
     <h2 class="section-title">スポット面談の料金</h2>
     <div class="price-card" id="fukushoku-price">
       <div class="price-label">復職面談パッケージ</div>
-      <div class="price-amount">132,000円 <span style="font-size:15px;">（税込）／120分まで</span></div>
+      <div class="price-amount"><span class="nowrap-unit">132,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）／120分まで</span></div>
       <div class="price-detail">
         事前情報の確認・面談・産業医意見書の作成までを一式で対応します。
       </div>
       <div class="price-note">
-        ※面談が120分を超える場合は、30分ごとに33,000円（税込）を加算します。<br>
+        ※面談が120分を超える場合は、30分ごとに<span class="nowrap-unit">33,000円（税込）</span>を加算します。<br>
         ※標準的な内容を想定しています。想定より著しく複雑な場合は、事前にお見積りします。<br>
-        ※主治医への照会状が必要な場合は、別途11,000円（税込）／1通がかかります。<br>
+        ※主治医への照会状が必要な場合は、別途<span class="nowrap-unit">11,000円（税込）／1通</span>がかかります。<br>
         ※復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、<a href="/service/advisor/" style="color:var(--teal);text-decoration:underline;">顧問契約</a>もご検討ください。
       </div>
     </div>
     <div class="price-card">
       <div class="price-label">その他のスポット面談</div>
-      <div class="price-amount">22,000円 <span style="font-size:15px;">（税込）／30分〜</span></div>
+      <div class="price-amount"><span class="nowrap-unit">22,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）／30分〜</span></div>
       <div class="price-detail">
-        <strong style="display:block;color:var(--navy);font-size:16px;margin-bottom:4px;">■ メンタルヘルス相談・面談　55,000円（税込）／1時間</strong>
+        <strong style="display:block;color:var(--navy);font-size:16px;margin-bottom:4px;">■ メンタルヘルス相談・面談　<span class="nowrap-unit">55,000円（税込）／1時間</span></strong>
         メンタル不調者への対応や、勤務継続・休職に関する面談、人事担当者への助言などに対応します。復職に関する評価と産業医意見書の作成をまとめて依頼したい場合は、上記の復職面談パッケージをご覧ください。<br>
-        延長は30分ごとに 27,500円（税込）。<br><br>
-        <strong style="display:block;color:var(--navy);font-size:16px;margin-bottom:4px;">■ 法定面談　22,000円（税込）／30分</strong>
+        延長は30分ごとに <span class="nowrap-unit">27,500円（税込）</span>。<br><br>
+        <strong style="display:block;color:var(--navy);font-size:16px;margin-bottom:4px;">■ 法定面談　<span class="nowrap-unit">22,000円（税込）／30分</span></strong>
         長時間労働者面接指導・高ストレス者面接指導・健康診断事後面談に対応します。
       </div>
       <div class="price-note">
-        ※主治医への照会状が必要な場合は、いずれの面談でも別途11,000円（税込）／1通がかかります。<br>
+        ※主治医への照会状が必要な場合は、いずれの面談でも別途<span class="nowrap-unit">11,000円（税込）／1通</span>がかかります。<br>
         ※訪問対応の場合は別途交通費を申し受けます。<br>
         ※どれが必要か分からない場合は、初回30分の無料相談でご案内します。
       </div>
@@ -647,7 +652,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q</span>顧問契約はスポット面談と何が違いますか？</div>
-        <div class="faq-a">スポット面談は単発の案件対応です。顧問契約では、会社の状況・経緯・職場環境を継続的に把握しながら、休職・復職・メンタル不調対応について相談できます。<br>従業員50人未満の場合は顧問契約（55,000円（税込）〜／月）があり、月1回・60分までの従業員面談・人事担当者との協議に加え、メールでの相談・経過共有を含みます。時間延長・別日の追加対応は別途料金です。すでに産業医がいる企業向けに、既存の体制を維持したままメンタルヘルス分野だけを追加する顧問契約もあります。復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、顧問契約もご検討ください。<a href="/fee/" style="color:var(--teal);text-decoration:underline;">料金・契約形態の選び方</a>で3つの契約形態を比較しています。</div>
+        <div class="faq-a">スポット面談は単発の案件対応です。顧問契約では、会社の状況・経緯・職場環境を継続的に把握しながら、休職・復職・メンタル不調対応について相談できます。<br>従業員50人未満の場合は顧問契約（<span class="nowrap-unit">55,000円（税込）〜／月</span>）があり、月1回・60分までの従業員面談・人事担当者との協議に加え、メールでの相談・経過共有を含みます。時間延長・別日の追加対応は別途料金です。すでに産業医がいる企業向けに、既存の体制を維持したままメンタルヘルス分野だけを追加する顧問契約もあります。復職対応が繰り返し発生する場合や、面談前後も継続して相談したい場合は、顧問契約もご検討ください。<a href="/fee/" style="color:var(--teal);text-decoration:underline;">料金・契約形態の選び方</a>で3つの契約形態を比較しています。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span class="faq-q-mark">Q</span>主治医の診断書と産業医の意見が異なることはありますか？</div>

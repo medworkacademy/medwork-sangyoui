@@ -441,6 +441,12 @@
   @media (max-width: 768px) {
     .faq-a { padding-left: 24px; }
   }
+
+  /* ボタンの矢印が単独行に落ちないよう、狭い画面で左右を詰める */
+  @media (max-width: 400px) {
+    .btn-primary, .btn-outline, .btn-line { padding-left: 14px; padding-right: 14px; }
+  }
+  .nowrap-unit { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -479,7 +485,7 @@
       <div class="hero-tag">ラインケア研修</div>
       <h1 class="hero-h1">管理職のためのメンタルヘルス・<br>ラインケア研修</h1>
       <p class="hero-lead">部下の変化に気づき、適切なタイミングでつなぐ。<br class="pc-br">精神科医×産業医の視点から、管理職が現場で使えるメンタル対応の軸をお伝えします。</p>
-      <a href="/contact/" class="btn-primary">ラインケア研修について相談する →</a>
+      <a href="/contact/" class="btn-primary">ラインケア研修について<span class="nowrap-unit">相談する →</span></a>
     </div>
   </div>
 </section>

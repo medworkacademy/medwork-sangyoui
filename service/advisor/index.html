@@ -531,6 +531,11 @@
 
   /* この見出しの「現在の産業医体制で、」を分断しないための指定（この1箇所のみ） */
   .nowrap-unit { white-space: nowrap; }
+
+  /* ボタンの矢印が単独行に落ちないよう、狭い画面で左右を詰める */
+  @media (max-width: 400px) {
+    .btn-primary, .btn-outline, .btn-line { padding-left: 14px; padding-right: 14px; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -673,7 +678,7 @@
       <div class="hero-tag">産業医契約</div>
       <h1 class="hero-h1">メンタルヘルス対応に強い<br>産業医契約</h1>
       <p class="hero-lead">休職・復職の対応や、不調が気になる社員への接し方。人事や管理職だけでは判断に迷う場面を、継続して相談できます。<br class="pc-br">精神科医・産業医が、本人の状態と仕事内容、これまでの経緯を踏まえ、会社が取れる対応と、次に確認する時期を一緒に整理します。<br class="pc-br">健診後の対応、職場巡視、衛生委員会など、日々の産業保健業務にも対応します。大阪府内・オンライン全国対応。</p>
-      <a href="/contact/" class="btn-primary">産業医契約について相談する →</a>
+      <a href="/contact/" class="btn-primary">産業医契約について<span class="nowrap-unit">相談する →</span></a>
     </div>
   </div>
 </section>
@@ -803,8 +808,8 @@
           <div class="plan-price-row">
             <div class="plan-price-label">料金</div>
             <div class="plan-price-item">
-              標準2時間：88,000円（税込）〜／月（目安50〜99人）<br>
-              標準3時間：110,000円（税込）〜／月（目安100〜200人）
+              標準2時間：<span class="nowrap-unit">88,000円（税込）〜／月</span><span class="nowrap-unit">（目安50〜99人）</span><br>
+              標準3時間：<span class="nowrap-unit">110,000円（税込）〜／月</span><span class="nowrap-unit">（目安100〜200人）</span>
             </div>
           </div>
         </div>
@@ -819,7 +824,7 @@
           <div class="plan-price-row">
             <div class="plan-price-label">料金</div>
             <div class="plan-price-item">
-              <p class="plan-price-main">55,000円（税込）〜／月</p>
+              <p class="plan-price-main"><span class="nowrap-unit">55,000円（税込）〜／月</span></p>
               <p>月1回・60分までの従業員面談・人事担当者との協議、メールでの相談・経過共有を含みます。時間延長・別日の追加対応は別途料金です。</p>
               <p>産業医意見書・主治医への照会状の作成を含みます。ストレスチェックの実施者を代表医師が担います（受検システム・実施事務の外部委託費は別途）。労働安全衛生法上の産業医の選任には当たりません。</p>
             </div>
