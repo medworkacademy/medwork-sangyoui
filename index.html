@@ -73,6 +73,10 @@
     letter-spacing: 0.04em;
     white-space: nowrap;
   }
+  /* ロゴはトップへのリンク。押せることが分かるよう、hoverで事務所名だけ少し薄くする
+     （肩書きバッジは小さい文字なので、コントラストを落とさないよう対象外にする） */
+  .logo .logo-name { transition: opacity 0.2s; }
+  .logo:hover .logo-name { opacity: 0.8; }
   .logo span {
     display: inline-block;
     background: var(--teal);
@@ -84,6 +88,14 @@
     margin-right: 10px;
     letter-spacing: 0.06em;
     vertical-align: middle;
+  }
+
+  /* 事務所名はバッジではなくサイト名として表示する（.logo span のバッジ指定を打ち消す）。
+     折り返し禁止だけを効かせ、狭い画面で末尾1文字が孤立しないようにする */
+  .logo span.logo-name {
+    display: inline; background: none; color: inherit; font-size: inherit;
+    font-weight: inherit; padding: 0; margin: 0; border-radius: 0;
+    letter-spacing: inherit; vertical-align: baseline; white-space: nowrap;
   }
   nav { display: flex; gap: 28px; }
   nav a {
@@ -409,6 +421,11 @@
     flex-direction: column;
     padding: 16px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    /* ヘッダー(72px)を除いた画面高を上限とし、低い画面や横向きでも下端の項目に
+       届くようメニュー内を縦スクロールさせる */
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -793,7 +810,7 @@
 <!-- HEADER -->
 <header>
   <a href="/" class="logo">
-    <span>精神科医 × 産業医</span><span class="nowrap-unit">メドワーク産業医事務所</span>
+    <span>精神科医 × 産業医</span><span class="logo-name">メドワーク産業医事務所</span>
   </a>
   <nav>
     <a href="/#quicknav"><span class="nowrap-unit">サービス</span>の選び方</a>
@@ -804,12 +821,12 @@
     <a href="/profile/"><span class="nowrap-unit">プロフィール</span></a>
     <a href="/contact/" class="btn-nav-cta">無料相談</a>
   </nav>
-  <button class="hamburger" id="hamburger" aria-label="メニュー">
+  <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/"><span class="nowrap-unit">トップ</span></a>
+  <a href="/">ホーム</a>
   <a href="/#quicknav"><span class="nowrap-unit">サービス</span>の選び方</a>
   <a href="/service/advisor/">産業医契約</a>
   <a href="/service/spot/"><span class="nowrap-unit">スポット</span>面談</a>
@@ -989,6 +1006,7 @@
         <span class="arrow">研修・講話について詳しく<span class="nowrap-unit">見る&nbsp;→</span></span>
       </a>
     </div>
+    <p style="margin-top:32px; font-size:16px; line-height:1.9; color:#3a3a3a;">大阪市内の事業場を中心に、大阪府内で訪問対応しています。<a href="/area/" style="color:var(--teal);text-decoration:underline;">対応エリアの詳細</a></p>
   </div>
 </section>
 
@@ -1077,7 +1095,8 @@
       <div class="footer-col-title">所在地・対応<span class="nowrap-unit">エリア</span></div>
       <div style="font-size:13px; line-height:1.9;">
         所在地：大阪府堺市南区<br>
-        対応<span class="nowrap-unit">エリア</span>：大阪府内中心・<span class="nowrap-unit">オンライン</span>全国対応可
+        対応<span class="nowrap-unit">エリア</span>：大阪府内中心・<span class="nowrap-unit">オンライン</span>全国対応可<br>
+        → <a href="/area/">対応エリアの詳細</a>
       </div>
     </div>
     <div>
@@ -1097,13 +1116,25 @@
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
+  const setExpanded = function() {
+    hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open') ? 'true' : 'false');
+  };
   hamburger.addEventListener('click', function() {
     mobileMenu.classList.toggle('open');
+    setExpanded();
   });
   mobileMenu.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       mobileMenu.classList.remove('open');
+      setExpanded();
     });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      setExpanded();
+      hamburger.focus();
+    }
   });
 </script>
 <script>
