@@ -547,6 +547,12 @@
   @media (max-width: 299px) {
     .mail-nowrap, .nowrap-unit { white-space: normal; }
   }
+
+  /* 比較表は狭い画面で横スクロールするため、スマホ幅でのみ案内を出す */
+  .table-scroll-hint { display: none; }
+  @media (max-width: 768px) {
+    .table-scroll-hint { display: block; margin-bottom: 10px; font-size: 13px; color: var(--text-sub); }
+  }
 </style>
 
 <!-- 構造化データ（GEO/AI検索対応・2026-08-30追加） -->
@@ -568,7 +574,7 @@
       "name": "スポットと顧問契約は、どちらが安いですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "案件が単発ならスポット、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（55,000円〜／月）には月1回・60分までの面談・協議とメールでのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、スポットから始めて状況を見る方法もあります。"
+        "text": "料金体系が異なるため、一律にどちらが安いとは言えません。1回だけの依頼ならスポット、相談・面談が継続する場合は顧問契約が比較しやすくなります。案件が単発ならスポット、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（55,000円〜／月）には月1回・60分までの面談・協議とメールでのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、スポットから始めて状況を見る方法もあります。"
       }
     },
     {
@@ -584,7 +590,7 @@
       "name": "メンタルヘルス対応に強い産業医を選ぶ意味はありますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "休職・復職の多くはメンタル不調に関連します。精神科医としての臨床経験がある産業医であれば、主治医の診断書の背景を読み取ったうえで、職場での就業可否や配慮について意見を整理できます。"
+        "text": "メンタル不調による休職・復職では、症状の経過と業務内容の両方を踏まえて就業可否や配慮を検討する必要があります。精神科医としての臨床経験がある産業医であれば、主治医の診断書の背景を読み取ったうえで、職場での就業可否や配慮について意見を整理できます。"
       }
     }
   ]
@@ -657,19 +663,19 @@
       <div class="price-card" id="price-shokutaku">
         <div class="price-label">嘱託産業医契約</div>
         <div class="price-amount"><span class="nowrap-unit">88,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）〜／月</span></div>
-        <div class="price-detail"><strong style="display:block;color:var(--navy);font-size:16px;margin:0 0 4px;">月額に含まれるもの</strong>月1回訪問（標準2時間：<span class="nowrap-unit">88,000円（税込）〜／月</span>、目安：従業員50〜99人）<br>月1回訪問（標準3時間：<span class="nowrap-unit">110,000円（税込）〜／月</span>、目安：従業員100〜200人）<br><span class="nowrap-unit">ストレスチェック</span>の実施者：代表医師が務めます<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>訪問時間の延長・別日の追加面談：<span class="nowrap-unit">16,500円（税込）／30分</span><br>訪問時交通費：別途実費<br>200人を超える場合：別途お見積り</div>
+        <div class="price-detail"><strong style="display:block;color:var(--navy);font-size:16px;margin:0 0 4px;">基本条件</strong>月1回訪問（標準2時間：<span class="nowrap-unit">88,000円（税込）〜／月</span>、目安：従業員50〜99人）<br>月1回訪問（標準3時間：<span class="nowrap-unit">110,000円（税込）〜／月</span>、目安：従業員100〜200人）<br><span class="nowrap-unit">ストレスチェック</span>の実施者：代表医師が務めます<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>訪問時間の延長・別日の追加面談：<span class="nowrap-unit">16,500円（税込）／30分</span><br>訪問時交通費：別途実費<br>200人を超える場合：別途お見積り</div>
         <p class="price-note">詳細は<a href="/service/advisor/" class="nowrap-unit">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-komon-small">
         <div class="price-label">顧問契約<wbr><span class="nowrap-unit">（小規模事業場向け／</span><wbr>従業員50人未満）</div>
         <div class="price-amount"><span class="nowrap-unit">55,000円</span> <span style="font-size:15px;" class="nowrap-unit">（税込）〜／月</span></div>
         <p style="margin:0 0 4px; font-size:15px; line-height:1.8; color:#444;">月1回・60分までの従業員面談・人事担当者との協議を含みます</p>
-        <div class="price-detail"><strong style="display:block;color:var(--navy);font-size:16px;margin:0 0 4px;">月額に含まれるもの</strong><span class="nowrap-unit">ストレスチェック</span>の実施者を代表医師が担います<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>時間延長・別日の追加対応：<span class="nowrap-unit">16,500円（税込）／30分</span><br><span class="nowrap-unit">ストレスチェック</span>の受検<span class="nowrap-unit">システム</span>・実施事務の外部委託費：別途<br>訪問をご希望の場合：交通費を含めて別途お見積り<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">その他</strong>契約期間：原則1年間（自動更新）</div>
+        <div class="price-detail"><strong style="display:block;color:var(--navy);font-size:16px;margin:0 0 4px;">基本条件</strong><span class="nowrap-unit">ストレスチェック</span>の実施者を代表医師が担います<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>時間延長・別日の追加対応：<span class="nowrap-unit">16,500円（税込）／30分</span><br><span class="nowrap-unit">ストレスチェック</span>の受検<span class="nowrap-unit">システム</span>・実施事務の外部委託費：別途<br>訪問をご希望の場合：交通費を含めて別途お見積り<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">その他</strong>契約期間：原則1年間（自動更新）</div>
         <p class="price-note">顧問契約は労働安全衛生法上の産業医の選任には当たりません。契約期間中に常時使用する労働者が50人以上となった場合は、法令上の産業医選任が必要となるため、嘱託産業医契約への切り替えとなります。詳細は<a href="/service/advisor/" class="nowrap-unit">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="price-komon-mental">
         <div class="price-label">顧問契約<wbr><span class="nowrap-unit">（メンタルヘルス支援追加／</span><wbr>既存産業医体制が<wbr>ある企業向け）</div>
-        <div class="price-detail">既存の産業医体制を維持したまま、<span class="nowrap-unit">メンタルヘルス</span>分野の継続支援だけを追加したい企業向けです。<br>週1回訪問でのご契約実績もあります。規模は問いません。訪問頻度を増やした契約をご希望の場合は、頻度に応じて個別にご案内します。<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">月額に含まれるもの</strong>月1回・60分までの従業員面談・人事担当者との協議<br>既存産業医との役割分担を整理して対応します<br><span class="nowrap-unit">ストレスチェック</span>への関与は、既存の実施体制に合わせて調整します<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>時間延長・別日の追加対応：別途料金</div>
+        <div class="price-detail">既存の産業医体制を維持したまま、<span class="nowrap-unit">メンタルヘルス</span>分野の継続支援だけを追加したい企業向けです。<br>週1回訪問でのご契約実績もあります。規模は問いません。<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">基本条件</strong>基本形：月1回・60分までの面談・協議。訪問頻度や対応時間を増やす場合は、契約内容に応じて個別にご案内します。<br>既存産業医との役割分担を整理して対応します<br><span class="nowrap-unit">ストレスチェック</span>への関与は、既存の実施体制に合わせて調整します<strong style="display:block;color:var(--navy);font-size:16px;margin:18px 0 4px;">追加料金・別途費用</strong>時間延長・別日の追加対応：別途料金</div>
         <p class="price-note">料金は個別にご案内します。詳細は<a href="/service/advisor/" class="nowrap-unit">産業医契約のページ</a>をご覧ください。</p>
       </div>
       <div class="price-card" id="fukushoku-package">
@@ -723,6 +729,7 @@
     <div class="container">
       <span class="section-label">比較</span>
       <h2 class="section-title">産業医の契約形態・料金比較</h2>
+      <p class="table-scroll-hint">※表は横に<span class="nowrap-unit">スクロール</span>してご覧いただけます</p>
       <div class="compare-table-wrap">
         <table>
           <thead>
@@ -743,7 +750,7 @@
             <tr>
               <th scope="row">頻度</th>
               <td>月1回訪問<br>（標準2〜3時間）</td>
-              <td>月1回・60分までの面談・協議<br>＋<span class="nowrap-unit">メール</span>相談</td>
+              <td>小規模向け：月1回・60分まで<br>メンタル支援追加：頻度は個別に設定</td>
               <td>都度・単発</td>
             </tr>
             <tr>
@@ -762,7 +769,7 @@
               <th scope="row">追加料金・別途費用</th>
               <td>延長 <span class="nowrap-unit">16,500円／30分</span>、<br>交通費実費</td>
               <td>延長 <span class="nowrap-unit">16,500円／30分</span>、<br>訪問時は別途見積り</td>
-              <td>延長・照会状<br>（<span class="nowrap-unit">11,000円／1通</span>）・<br>交通費</td>
+              <td>延長（各<span class="nowrap-unit">メニュー</span>記載の料金）<br>照会状 <span class="nowrap-unit">11,000円／1通</span><br>交通費</td>
             </tr>
             <tr>
               <th scope="row">向いている場合</th>
@@ -800,7 +807,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q"><span class="faq-q-mark">Q</span><span class="nowrap-unit">スポット</span>と顧問契約は、どちらが安いですか？</div>
-          <div class="faq-a">案件が単発なら<span class="nowrap-unit">スポット</span>、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（<span class="nowrap-unit">55,000円〜／月</span>）には月1回・60分までの面談・協議と<span class="nowrap-unit">メール</span>でのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、<span class="nowrap-unit">スポット</span>から始めて状況を見る方法もあります。</div>
+          <div class="faq-a">料金体系が異なるため、一律にどちらが安いとは言えません。1回だけの依頼なら<span class="nowrap-unit">スポット</span>、相談・面談が継続する場合は顧問契約が比較しやすくなります。案件が単発なら<span class="nowrap-unit">スポット</span>、相談や面談が継続的に発生するなら継続契約です。50人未満の場合、顧問契約（<span class="nowrap-unit">55,000円〜／月</span>）には月1回・60分までの面談・協議と<span class="nowrap-unit">メール</span>でのご相談が含まれ、産業医意見書・主治医への照会状の作成も含みます。案件が起きてから相談先を探す必要がなく、会社の経緯を知った状態で判断できることが継続契約の中身です。件数が読めない場合は、<span class="nowrap-unit">スポット</span>から始めて状況を見る方法もあります。</div>
         </div>
         <div class="faq-item">
           <div class="faq-q"><span class="faq-q-mark">Q</span>すでに産業医がいますが、<span class="nowrap-unit">メンタルヘルス</span>分野だけ追加で依頼できますか？</div>
@@ -808,7 +815,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q"><span class="faq-q-mark">Q</span><span class="nowrap-unit">メンタルヘルス</span>対応に強い産業医を選ぶ意味はありますか？</div>
-          <div class="faq-a">休職・復職の多くは<span class="nowrap-unit">メンタル</span>不調に関連します。精神科医としての臨床経験がある産業医であれば、主治医の診断書の背景を読み取ったうえで、職場での就業可否や配慮について意見を整理できます。</div>
+          <div class="faq-a"><span class="nowrap-unit">メンタル</span>不調による休職・復職では、症状の経過と業務内容の両方を踏まえて就業可否や配慮を検討する必要があります。精神科医としての臨床経験がある産業医であれば、主治医の診断書の背景を読み取ったうえで、職場での就業可否や配慮について意見を整理できます。</div>
         </div>
       </div>
     </div>
