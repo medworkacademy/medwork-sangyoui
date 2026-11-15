@@ -21,6 +21,9 @@
 <meta property="og:site_name" content="メドワーク産業医事務所">
 <meta property="og:url" content="https://medwork-sangyoui.jp/contact/thanks/">
 <meta property="og:image" content="https://medwork-sangyoui.jp/ogp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap">
 <style>
   /* ===== RESET & BASE ===== */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -470,6 +473,312 @@
   @media (max-width: 299px) {
     .mail-nowrap, .nowrap-unit { white-space: normal; }
   }
+
+  /* =====================================================================
+     2026-11-14 リデザイン（トップと同じ見た目）を下層ページにも適用：罫線・余白・Noto Sans JP。色はアイスブルー＋紺、ボタンは藍紫
+     ===================================================================== */
+  :root {
+    --ink: #12263a;
+    --navy: #12263a;
+    --navy-dark: #0d1c2b;
+    --teal: #12263a;
+    --teal-light: #e6f0f8;
+    --accent: #D9472B;
+    --gray-bg: #f2f8fd;
+    --gray-line: #d2e2ee;
+    --text-sub: #526a80;
+  }
+  body { color: #1f3042; }
+  h1, h2, h3 { letter-spacing: 0.01em; }
+  section { padding: 88px 0; }
+  .container { max-width: 1040px; }
+  .footer-grid, .footer-bottom { max-width: 1040px; }
+
+  /* ヘッダー：すりガラス */
+  header {
+    background: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    backdrop-filter: blur(16px) saturate(1.3);
+    box-shadow: none; border-bottom: 1px solid rgba(210, 226, 238, 0.8);
+  }
+  .logo { color: var(--ink); }
+  .logo span:not(.logo-name) {
+    background: none; color: var(--text-sub); border-radius: 0;
+    padding: 0 14px 0 0; margin-right: 14px; border-right: 1px solid var(--gray-line);
+    font-size: 13px; font-weight: 600;
+  }
+  nav a { color: var(--ink); font-weight: 600; }
+  nav a:hover, nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .btn-nav-cta { border-radius: 2px; }
+  .hamburger span { background: var(--ink); }
+  .mobile-menu { background: rgba(255, 255, 255, 0.96); box-shadow: none; border-bottom: 1px solid var(--gray-line); }
+  .mobile-menu a { color: var(--ink); border-bottom-color: var(--gray-line); }
+  .mobile-menu-cta { color: #fff !important; border-radius: 2px; }
+
+  /* 見出し・ボタン */
+  .section-title { font-size: 34px; font-weight: 600; letter-spacing: 0.01em; margin-bottom: 40px; color: var(--ink); }
+  .section-title::after { display: none; }
+  .btn-primary { border-radius: 2px; box-shadow: none; }
+  .btn-primary:hover { transform: none; background: #BB3A22; }
+  .btn-nav-cta:hover { background: #BB3A22; }
+  .text-link { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; font-weight: 600; }
+  .body-p { font-size: 16px; line-height: 1.95; color: #2c3e50; margin-bottom: 18px; text-wrap: pretty; }
+  .body-p:last-child { margin-bottom: 0; }
+
+  /* ページ冒頭：単色→白へ抜ける淡い空色。装飾なし */
+  #page-hero {
+    background: linear-gradient(180deg, #e6f1fb 0%, #f4f9fe 62%, #ffffff 100%);
+    padding: 152px 0 72px; border-bottom: 0;
+  }
+  #page-hero::before { display: none; }
+  .hero-tag {
+    background: none; border: 0; border-radius: 0; padding: 0;
+    color: var(--accent); font-size: 15px; font-weight: 700; letter-spacing: 0.14em; margin-bottom: 28px;
+  }
+  .hero-h1 { color: var(--ink); font-size: 38px; font-weight: 650; line-height: 1.5; letter-spacing: 0; margin-bottom: 28px; }
+  .hero-lead { color: #34495c; font-size: 17px; line-height: 1.95; max-width: 760px; margin-bottom: 36px; text-wrap: pretty; }
+
+  /* 継続契約の意味：箱なし */
+  #benefits { background: #fff; }
+  .bullet-list li::before { display: none; }
+  .bullet-list li { padding-left: 0; }
+  .benefit-list { gap: 0; border-top: 1px solid var(--ink); }
+  .benefit-list li { padding: 22px 0; border-bottom: 1px solid var(--gray-line); font-size: 16px; line-height: 1.9; color: #2c3e50; }
+  .benefit-list li strong { color: var(--ink); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+
+  /* 契約の選び方・対応内容：色付きの箱をやめ、罫線の行にする */
+  #branch { background: var(--gray-bg); }
+  #whatwedo { background: #fff; }
+  .point-lead { color: #2c3e50; font-size: 16px; text-wrap: pretty; }
+  .point-box { background: none; border-radius: 0; border-top: 1px solid var(--ink); padding: 26px 0 30px; margin-bottom: 0; font-size: 16px; line-height: 1.95; color: #2c3e50; }
+  .point-box + .point-box { border-top-color: var(--gray-line); }
+  .point-box-title { font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 12px; line-height: 1.6; }
+  .point-box a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; font-weight: 600; }
+  #whatwedo .point-box { padding: 22px 0 26px; }
+  #whatwedo .point-box-title { font-size: 18px; margin-bottom: 8px; }
+  @media (min-width: 901px) {
+    #whatwedo .container { display: block; }
+  }
+
+  /* 毎月の訪問で行うこと */
+  #visit { background: #fff; }
+  .visit-list { border-top: 1px solid var(--ink); margin-bottom: 28px; }
+  .visit-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--gray-line); }
+  .visit-row dt { font-weight: 600; color: var(--ink); font-size: 17px; }
+  .visit-row dd { color: #2c3e50; font-size: 16px; }
+  .visit-note { display: block; font-size: 14px; color: var(--text-sub); margin-top: 2px; }
+
+  /* 職場にお返しするもの */
+  #return { background: var(--gray-bg); }
+  .return-item { border-top: 1px solid var(--ink); padding: 28px 0 32px; }
+  .return-item + .return-item { border-top-color: var(--gray-line); }
+  .return-item h3 { font-size: 22px; font-weight: 600; color: var(--ink); line-height: 1.55; margin-bottom: 12px; text-wrap: balance; }
+  .return-item p { font-size: 16px; line-height: 1.95; color: #2c3e50; text-wrap: pretty; }
+
+  /* 休職・復職／実績 */
+  #stages { background: var(--gray-bg); }
+  #record { background: #fff; }
+
+  /* 契約プラン：紺帯のカードをやめ、罫線の区切りに */
+  #plans { background: var(--gray-bg); }
+  .plan-cards { gap: 0; }
+  .plan-card { border: 0; border-radius: 0; border-top: 1px solid var(--ink); overflow: visible; padding: 30px 0 36px; }
+  .plan-card + .plan-card { border-top-color: var(--gray-line); }
+  .plan-card-header { background: none; color: var(--ink); padding: 0 0 18px; }
+  .plan-card-header h3 { font-size: 22px; font-weight: 600; line-height: 1.55; margin-bottom: 6px; color: var(--ink); }
+  .plan-card-header p { color: var(--text-sub); font-size: 15px; }
+  .plan-card-body { padding: 0; }
+  .plan-price-row { background: none; border-radius: 0; padding: 0; margin-top: 0; }
+  .plan-price-label { color: var(--text-sub); }
+  .plan-price-item { color: #1f3042; font-size: 17px; line-height: 2.1; font-weight: 600; }
+  .plan-price-item p { font-weight: 400; font-size: 16px; line-height: 1.95; }
+  .plan-price-main { font-size: 24px; font-weight: 600; color: var(--ink); }
+
+  /* 契約までの流れ：丸数字をやめる */
+  #flow { background: #fff; }
+  .flow-step { gap: 20px; padding: 26px 0; border-bottom-color: var(--gray-line); }
+  .flow-step:first-child { border-top: 1px solid var(--ink); }
+  .flow-num { width: 32px; height: auto; background: none; color: var(--accent); border-radius: 0; font-size: 26px; font-weight: 600; justify-content: flex-start; line-height: 1.2; }
+  .flow-content h3 { font-size: 20px; font-weight: 600; color: var(--ink); }
+  .flow-content p { font-size: 16px; color: #2c3e50; text-wrap: pretty; }
+
+  /* FAQ：丸いQをやめ、罫線の一覧に */
+  #faq { background: var(--gray-bg); }
+  .faq-list { gap: 0; border-top: 1px solid var(--ink); }
+  .faq-item { background: none; box-shadow: none; border-radius: 0; border-bottom: 1px solid var(--gray-line); }
+  .faq-q { padding: 24px 0 10px; font-size: 18px; color: var(--ink); gap: 14px; font-weight: 600; }
+  .faq-q-mark { background: none; color: var(--accent); width: auto; height: auto; border-radius: 0; font-size: 24px; line-height: 1.3; margin-top: 0; font-weight: 600; }
+  .faq-a { padding: 0 0 26px 38px; font-size: 16px; color: #2c3e50; text-wrap: pretty; }
+  .faq-a a { color: var(--ink) !important; text-decoration-color: var(--accent) !important; text-underline-offset: 4px; }
+
+  /* 最後の相談：唯一の濃色の帯、左寄せ */
+  #cta { text-align: left; padding: 96px 0; }
+  #cta .section-title { color: #fff; margin-bottom: 20px; }
+  .cta-lead { margin-bottom: 36px; }
+
+  /* 左に見出し・右に本文（PCのみ） */
+  @media (min-width: 901px) {
+    .split > .container { display: grid; grid-template-columns: 340px minmax(0, 1fr); column-gap: 56px; align-items: start; }
+    .split > .container > .section-title { grid-column: 1; margin-bottom: 0; font-size: 30px; }
+    .split > .container > :not(.section-title) { grid-column: 2; }
+  }
+
+  /* タブレット・スマホ */
+  @media (max-width: 768px) {
+    #page-hero { padding: 104px 0 48px; }
+    .hero-h1 { font-size: 22px !important; }
+    .hero-h1 br { display: block; }
+    .hero-lead { font-size: 16px; }
+    .section-title { font-size: 24px; margin-bottom: 26px; }
+    section { padding: 60px 0; }
+    .visit-row { grid-template-columns: 1fr; gap: 4px; }
+    .point-box-title, .return-item h3, .plan-card-header h3 { font-size: 19px; }
+    .plan-price-main { font-size: 20px; }
+    .faq-q { font-size: 17px; }
+    .faq-a { padding: 0 0 22px 0; }
+    .plan-card-body { padding: 0; }
+    .plan-price-row { padding: 0; }
+    #cta { padding: 64px 0; }
+  }
+
+  /* --- フッター：濃紺をやめ、明るいアイスブルーに --- */
+  footer { background: #e6f0f8; color: var(--text-sub); border-top: 1px solid var(--gray-line); }
+  footer .footer-col-title { color: var(--ink); }
+  footer a { color: var(--text-sub); text-decoration: underline; text-decoration-color: rgba(18, 38, 58, 0.25); text-underline-offset: 3px; }
+  footer a:hover { color: var(--ink); text-decoration-color: var(--accent); }
+  .footer-bottom { border-top-color: rgba(18, 38, 58, 0.14); }
+  .footer-grid, .footer-bottom { max-width: 976px; }
+
+  /* --- 実績の数字：見出し(38px)と本文(17px)の間に収める --- */
+  .fv-fact { padding: 16px 0; gap: 0; }
+  .fv-fact strong { font-size: 24px; font-weight: 600; line-height: 1.5; letter-spacing: 0.02em; }
+  .fv-fact span { font-size: 14px; }
+
+  /* --- 行動ボタン：朱色のベタ塗りをやめ、濃紺の控えめなボタンに（朱色は差し色のみ） --- */
+  .btn-primary, .btn-nav-cta, .mobile-menu-cta {
+    background: #5149a3; color: #fff !important; box-shadow: none; border-radius: 2px;
+    font-weight: 600; letter-spacing: 0.06em;
+  }
+  .btn-primary { padding: 15px 28px; font-size: 15px; }
+  .btn-primary-lg { padding: 17px 40px; font-size: 16px; }
+  .btn-nav-cta { padding: 9px 20px; font-size: 14px; }
+  .btn-primary:hover, .btn-nav-cta:hover, .mobile-menu-cta:hover { background: #6a63bb; transform: none; }
+  #cta .btn-primary { background: #fff; color: #5149a3 !important; }
+  #cta .btn-primary:hover { background: #e6f0f8; }
+  @media (max-width: 768px) {
+    .fv-fact strong { font-size: 20px; }
+    .btn-primary { padding: 14px 22px; }
+    .btn-primary-lg { padding: 15px 24px; font-size: 15px; }
+  }
+
+  /* --- ヒーロー上のラベル：赤字をやめ、紺で大きく --- */
+  .fv-tag, .hero-tag { color: var(--ink); font-size: 20px; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 22px; }
+  @media (max-width: 768px) { .fv-tag, .hero-tag { font-size: 16px; margin-bottom: 18px; } }
+
+  /* --- 書体：iPhone・Mac・Windowsのどれでも同じ見え方になるよう、Noto Sans JPを読み込む ---
+     見出しは中太(500)にして、画数の多い漢字が潰れないようにする。端末側の書体は代替として残す */
+  body { font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif; font-weight: 400; }
+  h1, h2, h3, .section-title, .fv-catch, .hero-h1, .doctor-name, .fv-fact strong,
+  .pain-card h3, .guide-card h3, .return-item h3, .plan-card-header h3, .point-box-title,
+  .flow-content h3, .start-item h3, .faq-q, .benefit-list li strong, .plan-price, .plan-price-main { font-weight: 500; }
+  .fv-catch, .hero-h1 { font-weight: 500; letter-spacing: 0.01em; }
+  .need-list li, .visit-row dt, .plan-row strong, .plan-price-item, .flow-num, .faq-q-mark { font-weight: 500; }
+  .btn-primary, .btn-outline, .btn-line, .btn-nav-cta, .mobile-menu-cta, .fv-tag, .hero-tag, nav a, .arrow { font-weight: 500; }
+  body, p, li, dd { letter-spacing: 0.01em; }
+
+  /* --- 小さい文字をまとめて上げる（補足・注記・ボタン・フッター） --- */
+  @media (min-width: 769px) { .logo span:not(.logo-name) { font-size: 14px; } }
+  .btn-nav-cta { font-size: 15px; }
+  .btn-line, .arrow, .service-link-card .arrow, .service-grid-3 .arrow { font-size: 16px; }
+  .plan-note { font-size: 16px; }
+  .plan-price small { font-size: 16px; }
+  .plan-tax, .visit-note, .plan-price-label, .doctor-name span { font-size: 15px; }
+  .plan-area { font-size: 16px; }
+  thead th, .cases-table-wrap thead th { font-size: 15px; }
+  footer .footer-col-title { font-size: 16px; }
+  footer div[style*="font-size:13px"] { font-size: 15px !important; }
+  .footer-bottom p, .footer-bottom a { font-size: 15px; }
+
+  /* --- 小見出し(h3)の大きさを全セクションで統一：PC 22px／スマホ 19px --- */
+  .pain-card h3, .guide-card h3, .guide-else h3, .strength-card-header h3,
+  .strength-card:first-child .strength-card-header h3, .start-item h3, .return-item h3,
+  .plan-card-header h3, .service-link-card h3, .point-box-title, .flow-content h3 { font-size: 22px; }
+  #whatwedo .point-box-title { font-size: 18px; }
+  @media (max-width: 768px) {
+    .pain-card h3, .guide-card h3, .guide-else h3, .strength-card-header h3,
+  .strength-card:first-child .strength-card-header h3, .start-item h3, .return-item h3,
+  .plan-card-header h3, .service-link-card h3, .point-box-title, .flow-content h3 { font-size: 19px; }
+    #whatwedo .point-box-title { font-size: 17px; }
+  }
+
+  /* --- 改行：文節の途中で割らない（見出し・リスト・本文）。未対応のブラウザでは従来どおり --- */
+  h1, h2, h3, p, li, dd, dt, .point-box-title, .faq-q, .faq-a, .need-list li, .fv-sub, .hero-lead {
+    word-break: auto-phrase; line-break: strict; overflow-wrap: anywhere;
+  }
+  h1, h2, h3, .point-box-title, .faq-q { text-wrap: balance; }
+  p, li, dd, .faq-a { text-wrap: pretty; }
+
+  /* --- 相談の入口：見出しを広く取り、説明とボタンを下・右に置く（見出しが狭い列で割れないように） --- */
+  @media (min-width: 901px) {
+    .guide-card {
+      grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "t b" "p b"; gap: 8px 48px; align-items: center;
+    }
+    .guide-card h3 { grid-area: t; }
+    .guide-card p { grid-area: p; max-width: 40em; }
+    .guide-card .btn-line { grid-area: b; align-self: center; }
+  }
+
+  /* --- 左の見出し列を少し広げ、見出しが文節の途中で割れないようにする --- */
+  @media (min-width: 901px) {
+    .split > .container { grid-template-columns: 380px minmax(0, 1fr); column-gap: 48px; }
+    .split > .container > .section-title { font-size: 28px; }
+  }
+
+  /* --- 左右の見出し列をやめ、全セクションを「見出しが上・本文が下」に統一。本文の幅は読みやすい長さに --- */
+  @media (min-width: 901px) {
+    .split > .container { display: block; }
+    .split > .container > .section-title { font-size: 34px; margin-bottom: 36px; }
+    .split > .container > :not(.section-title) { max-width: 800px; }
+    .split .section-title br { display: none; }
+  }
+
+  /* --- 下層ページ共通：英字・小見出しラベルは使わない（トップと同じ） --- */
+  .section-label { display: none; }
+
+  /* --- 副ボタン：明るい背景の上でも見えるよう、紺の枠線に --- */
+  .btn-outline { color: var(--ink); border: 1px solid var(--ink); border-radius: 2px; background: transparent; }
+  .btn-outline:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  /* --- 旧デザインの濃色ヒーロー用の白文字を、明るいヒーローで読める色に --- */
+  .hero-name-sub { color: var(--text-sub); }
+  .hero-badge { background: #fff; border: 1px solid var(--gray-line); color: var(--ink); border-radius: 2px; font-weight: 500; }
+  .hero-photo img { border-radius: 2px; box-shadow: none; }
+  #page-hero .hero-inner > div[style*="border-radius:50%"] { background: #fff !important; border-color: var(--gray-line) !important; }
+  #page-hero .hero-inner > div[style*="border-radius:50%"] span { color: var(--ink) !important; }
+  #page-hero .hero-inner[style*="center"] .hero-lead { margin-left: auto; margin-right: auto; }
+
+  /* --- プロフィールの資格欄：紺帯のカードをやめ、罫線の区切りに --- */
+  .profile-card { background: none; border-radius: 0; box-shadow: none; border-top: 1px solid var(--ink); }
+  .profile-card-header { background: none; color: var(--ink); padding: 24px 0 8px; }
+  .profile-card-header p { color: var(--text-sub); }
+  .profile-icon { display: none; }
+  .profile-card-body { padding-left: 0; padding-right: 0; }
+
+  /* --- 表：狭い画面で「対象」列が1文字幅に潰れないように --- */
+  .guide-table th:nth-child(2), .guide-table td:nth-child(2) { white-space: nowrap; }
+
+  /* --- お問い合わせフォーム：送信ボタンを藍紫、枠は細い罫線に --- */
+  .form-wrap { box-shadow: none; border: 1px solid var(--gray-line); border-radius: 2px; }
+  .btn-submit { background: #5149a3; border-radius: 2px; box-shadow: none; font-weight: 500; }
+  .btn-submit:hover { background: #6a63bb; transform: none; }
+  .form-group label .required { background: var(--ink); border-radius: 2px; font-weight: 500; }
+
+  /* --- 最後の相談欄：トップと同じく白地・藍紫ボタンに（2026-11-15） --- */
+  #cta { background: #fff; border-top: 1px solid var(--gray-line); }
+  #cta .section-title { color: var(--ink); }
+  #cta .cta-lead { color: var(--text-sub); }
+  #cta .btn-primary { background: #5149a3; color: #fff !important; }
+  #cta .btn-primary:hover { background: #433c8c; }
 </style>
 </head>
 <body>
@@ -480,25 +789,23 @@
     <span>精神科医 × 産業医</span><span class="logo-name">メドワーク産業医事務所</span>
   </a>
   <nav>
-    <a href="/#quicknav"><span class="nowrap-unit">サービス</span>の選び方</a>
     <a href="/service/advisor/">産業医契約</a>
     <a href="/service/spot/"><span class="nowrap-unit">スポット</span>面談</a>
     <a href="/service/training/">研修</a>
     <a href="/fee/">料金</a>
     <a href="/profile/"><span class="nowrap-unit">プロフィール</span></a>
-    <a href="/contact/" class="btn-nav-cta">無料相談</a>
+    <a href="/contact/" class="btn-nav-cta">お問い合わせ</a>
   </nav>
   <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="/">ホーム</a>
-  <a href="/#quicknav"><span class="nowrap-unit">サービス</span>の選び方</a>
   <a href="/service/advisor/">産業医契約</a>
   <a href="/service/spot/"><span class="nowrap-unit">スポット</span>面談</a>
   <a href="/service/training/">研修</a>
   <a href="/fee/">料金</a>
   <a href="/profile/"><span class="nowrap-unit">プロフィール</span></a>
-  <a href="/contact/" class="mobile-menu-cta">無料相談</a>
+  <a href="/contact/" class="mobile-menu-cta">お問い合わせ</a>
 </div>
 
 <!-- CONFIRMATION -->
@@ -547,7 +854,7 @@
       <div class="footer-col-title">お問い合わせ</div>
       <div style="font-size:13px; line-height:1.9;">
         E-mail：<a href="mailto:contact@medwork-sangyoui.jp" class="mail-nowrap">contact@medwork-sangyoui.jp</a><br>
-        初回30分 無料相談受付中
+        スポット面談は初回30分無料
       </div>
     </div>
   </div>
